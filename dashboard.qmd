@@ -1,11 +1,20 @@
 ---
-titel: "my dashboard"
+title: "my dashboard"
 author: Ruben Gehlen
 format: dashboard
 
 ---
 
 # Gender by Year
+
+```{r}
+#| include: false
+
+library(tidyverse)
+athlete_events <- read_csv("Data/Raw/athlete_events.csv")
+
+source("R/data_prep.r")
+```
 
 ## Column
 ```{r}
