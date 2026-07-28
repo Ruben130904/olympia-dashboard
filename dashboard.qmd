@@ -1,0 +1,32 @@
+---
+titel: "my dashboard"
+author: Ruben Gehlen
+format: dashboard
+
+---
+
+# Gender by Year
+
+## Column
+```{r}
+#| title: "Frauenanteil bei Olympischen Spielen über Zeit"
+
+library(ggplot2)
+library(plotly)
+library(knitr)
+library(markdown)
+
+p <- ggplot(gender_by_year_female, aes(x = Year, y = share, color = Season)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 1.5) +
+  scale_y_continuous(labels = scales::percent, limits = c(0, NA)) +
+  scale_color_manual(values = c("Summer" = "#E69F00", "Winter" = "#0072B2")) +
+  labs(
+    x = "Jahr",
+    y = "Anteil weiblicher Athlet:innen",
+    color = "Saison"
+  ) +
+  theme_minimal(base_size = 13)
+
+ggplotly(p)
+```
