@@ -1,0 +1,4 @@
+renv/library/
+*_files/
+*.html
+.Rproj.user/
