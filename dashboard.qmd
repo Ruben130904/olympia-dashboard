@@ -1,7 +1,9 @@
 ---
 title: "my dashboard"
 author: Ruben Gehlen
-format: dashboard
+format: 
+  dashboard:
+    theme: darkly
 ---
 
 ```{r}
@@ -104,7 +106,7 @@ library(knitr)
 library(markdown)
 ```
 
-## Column
+### Column
 ```{r}
 #| title: "Frauenanteil bei Olympischen Spielen über Zeit"
 p <- ggplot(gender_by_year_female, aes(x = Year, y = share, color = Season)) +
