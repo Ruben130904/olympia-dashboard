@@ -1,11 +1,50 @@
 ---
-title: "my dashboard"
-author: Ruben Gehlen
-format: dashboard
-
+title: "Women in the Olympics"
+author: "Ruben Gehlen"
+format: 
+  dashboard: 
+    logo: FALSE
+    
 ---
 
-# Gender by Year
+
+# Page One
+## Row {height="20%"}
+
+
+```{r}
+#| content: valuebox
+#| title: "Spam per day"
+list(
+  icon = "trash",
+  color = "danger",
+  value = 3
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Spam per day"
+list(
+  icon = "trash",
+  color = "danger",
+  value = 2
+)
+```
+
+
+```{r}
+#| content: valuebox
+#| title: "Spam per day"
+list(
+  icon = "trash",
+  color = "danger",
+  value = 1
+)
+```
+
+
+## Row {height="80%"}
 
 ```{r}
 #| include: false
