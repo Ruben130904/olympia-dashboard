@@ -1,68 +1,112 @@
 ---
-title: "Women in the Olympics"
-author: "Ruben Gehlen"
-format: 
-  dashboard: 
-    logo: FALSE
-    
+title: "my dashboard"
+author: Ruben Gehlen
+format: dashboard
 ---
 
 ```{r}
 #| include: false
 
 library(tidyverse)
+library(scales)
 athlete_events <- read_csv("Data/Raw/athlete_events.csv")
 
 source("R/data_prep.r")
 ```
 
-# Page One
-## Row {height="20%"}
+# Startseite
 
+## Row {height=20% .tabset}
+
+### Sommerspiele
 
 ```{r}
 #| content: valuebox
-#| title: "Teilnehmer*innen alltime"
+#| title: "Teilnehmer*innen alltime (Sommer)"
 list(
   icon = "people-fill",
-  color = "primary",
-  value = scales::comma(n_total)
+  color = "#E69F00",
+  value = scales::comma(stats_summer$n_total)
 )
 ```
 
 ```{r}
 #| content: valuebox
-#| title: "Frauen 2016"
 list(
+  title = paste0("Frauen ", stats_summer$latest_year),
   icon = "gender-female",
-  color = "info",
-  value = paste0(scales::comma(n_women_current), " (", scales::percent(share_women_current, accuracy = 0.1), ")")
+  color = "#E69F00",
+  value = paste0(
+    scales::comma(stats_summer$n_women_current), " (",
+    scales::percent(stats_summer$share_women_current, accuracy = 0.1), ")"
+  )
 )
 ```
-
 
 ```{r}
 #| content: valuebox
-#| title: "Frauen im ersten Jahr 1900"
 list(
+  title = paste0("Frauen ", stats_summer$first_year_women, " (erstes Jahr)"),
   icon = "calendar-event",
-  color = "warning",
-  value = paste0(scales::comma(n_women_first), " (", scales::percent(share_women_first, accuracy = 0.1), ")")
+  color = "#E69F00",
+  value = paste0(
+    scales::comma(stats_summer$n_women_first), " (",
+    scales::percent(stats_summer$share_women_first, accuracy = 0.1), ")"
+  )
 )
 ```
 
+### Winterspiele
 
-## Row {height="80%"}
-
-## Column
 ```{r}
-#| title: "Frauenanteil bei Olympischen Spielen über Zeit"
+#| content: valuebox
+#| title: "Teilnehmer*innen alltime (Winter)"
+list(
+  icon = "people-fill",
+  color = "#0072B2",
+  value = scales::comma(stats_winter$n_total)
+)
+```
 
+```{r}
+#| content: valuebox
+list(
+  title = paste0("Frauen ", stats_winter$latest_year),
+  icon = "gender-female",
+  color = "#0072B2",
+  value = paste0(
+    scales::comma(stats_winter$n_women_current), " (",
+    scales::percent(stats_winter$share_women_current, accuracy = 0.1), ")"
+  )
+)
+```
+
+```{r}
+#| content: valuebox
+list(
+  title = paste0("Frauen ", stats_winter$first_year_women, " (erstes Jahr)"),
+  icon = "calendar-event",
+  color = "#0072B2",
+  value = paste0(
+    scales::comma(stats_winter$n_women_first), " (",
+    scales::percent(stats_winter$share_women_first, accuracy = 0.1), ")"
+  )
+)
+```
+
+## Row {height=80%}
+
+```{r}
+#| include: false
 library(ggplot2)
 library(plotly)
 library(knitr)
 library(markdown)
+```
 
+## Column
+```{r}
+#| title: "Frauenanteil bei Olympischen Spielen über Zeit"
 p <- ggplot(gender_by_year_female, aes(x = Year, y = share, color = Season)) +
   geom_line(linewidth = 1) +
   geom_point(size = 1.5) +
