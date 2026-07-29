@@ -7,45 +7,6 @@ format:
     
 ---
 
-
-# Page One
-## Row {height="20%"}
-
-
-```{r}
-#| content: valuebox
-#| title: "Spam per day"
-list(
-  icon = "trash",
-  color = "danger",
-  value = 3
-)
-```
-
-```{r}
-#| content: valuebox
-#| title: "Spam per day"
-list(
-  icon = "trash",
-  color = "danger",
-  value = 2
-)
-```
-
-
-```{r}
-#| content: valuebox
-#| title: "Spam per day"
-list(
-  icon = "trash",
-  color = "danger",
-  value = 1
-)
-```
-
-
-## Row {height="80%"}
-
 ```{r}
 #| include: false
 
@@ -54,6 +15,44 @@ athlete_events <- read_csv("Data/Raw/athlete_events.csv")
 
 source("R/data_prep.r")
 ```
+
+# Page One
+## Row {height="20%"}
+
+
+```{r}
+#| content: valuebox
+#| title: "Teilnehmer*innen alltime"
+list(
+  icon = "people-fill",
+  color = "primary",
+  value = scales::comma(n_total)
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Frauen 2016"
+list(
+  icon = "gender-female",
+  color = "info",
+  value = paste0(scales::comma(n_women_current), " (", scales::percent(share_women_current, accuracy = 0.1), ")")
+)
+```
+
+
+```{r}
+#| content: valuebox
+#| title: "Frauen im ersten Jahr 1900"
+list(
+  icon = "calendar-event",
+  color = "warning",
+  value = paste0(scales::comma(n_women_first), " (", scales::percent(share_women_first, accuracy = 0.1), ")")
+)
+```
+
+
+## Row {height="80%"}
 
 ## Column
 ```{r}
