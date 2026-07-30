@@ -87,3 +87,18 @@ stats_winter <- get_valuebox_stats("Winter")
 col_summer <- "#E69F00"
 col_winter <- "#0072B2"
 
+
+# Data prep für Seite 2
+# Genderanteil nach Sportart
+
+# In R/data_prep.R ergänzen
+
+gender_by_sport <- athlete_events |> 
+  distinct(ID, Year, Sport, Sex) |> 
+  count(Year, Sport, Sex, name = "n") |> 
+  group_by(Year, Sport) |> 
+  mutate(total = sum(n), share = n / total) |> 
+  ungroup() |> 
+  filter(Sex == "F")
+
+

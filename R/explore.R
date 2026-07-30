@@ -3,6 +3,7 @@
 
 # Libs
 library("tidyverse")
+library(plotly)
 
 # Daten einlesen
 
@@ -30,3 +31,20 @@ count(athlete_events, Sport)           # Häufigkeiten
 
 athlete_events |> 
   count(Year, Sex)
+
+
+
+
+p2 <- ggplot(gender_by_sport, aes(x = Year, y = share, group = Sport, text = Sport, color = Sport)) +
+  geom_line(alpha = 0.3, linewidth = 0.5) +
+  scale_y_continuous(labels = scales::percent, limits = c(0, 1)) +
+  labs(
+    x = "Jahr",
+    y = "Frauenanteil",
+    title = NULL
+  ) +
+  theme_minimal(base_size = 13)
+
+ggplotly(p2, tooltip = "text")
+
+p2

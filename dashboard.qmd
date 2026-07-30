@@ -3,7 +3,8 @@ title: "Frauen bei den Olympischen Spielen"
 author: Ruben Gehlen
 format: 
   dashboard:
-    theme: darkly
+    theme: litera
+    css: style.css 
 ---
 
 ```{r}
@@ -18,7 +19,7 @@ source("R/data_prep.r")
 
 # Startseite
 
-## Row {height=20% .tabset}
+## Row {height=40% .tabset}
 
 ### Sommerspiele
 
@@ -96,7 +97,7 @@ list(
 )
 ```
 
-## Row {height=80%}
+## Row {height=60%}
 
 ```{r}
 #| include: false
@@ -123,3 +124,27 @@ p <- ggplot(gender_by_year_female, aes(x = Year, y = share, color = Season)) +
 
 ggplotly(p)
 ```
+
+
+# Nach Sportart
+
+## Row {.tabset}
+
+### Nach Sportart über Zeit
+
+```{r}
+p2 <- ggplot(gender_by_sport, aes(x = Year, y = share, group = Sport, text = Sport, color = Sport)) +
+  geom_line(alpha = 0.3, linewidth = 0.5) +
+  scale_y_continuous(labels = scales::percent, limits = c(0, 1)) +
+  labs(
+    x = "Jahr",
+    y = "Frauenanteil",
+    title = NULL
+  ) +
+  theme_minimal(base_size = 13)
+
+ggplotly(p2, tooltip = "text")
+```
+
+### Aktueller Vergleich
+[Balkendiagramm, alle Sportarten, sortiert nach Frauenanteil]
