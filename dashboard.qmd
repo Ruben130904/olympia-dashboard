@@ -1,5 +1,5 @@
 ---
-title: "my dashboard"
+title: "Frauen bei den Olympischen Spielen"
 author: Ruben Gehlen
 format: 
   dashboard:
@@ -27,8 +27,8 @@ source("R/data_prep.r")
 #| title: "Teilnehmer*innen alltime (Sommer)"
 list(
   icon = "people-fill",
-  color = "#E69F00",
-  value = scales::comma(stats_summer$n_total)
+  color = col_summer,
+  value = fmt_n(stats_summer$n_total)
 )
 ```
 
@@ -37,10 +37,10 @@ list(
 list(
   title = paste0("Frauen ", stats_summer$latest_year),
   icon = "gender-female",
-  color = "#E69F00",
+  color = col_summer,
   value = paste0(
-    scales::comma(stats_summer$n_women_current), " (",
-    scales::percent(stats_summer$share_women_current, accuracy = 0.1), ")"
+    fmt_n(stats_summer$n_women_current), " (",
+    fmt_pct(stats_summer$share_women_current), ")"
   )
 )
 ```
@@ -50,10 +50,10 @@ list(
 list(
   title = paste0("Frauen ", stats_summer$first_year_women, " (erstes Jahr)"),
   icon = "calendar-event",
-  color = "#E69F00",
+  color = col_summer,
   value = paste0(
-    scales::comma(stats_summer$n_women_first), " (",
-    scales::percent(stats_summer$share_women_first, accuracy = 0.1), ")"
+    fmt_n(stats_summer$n_women_first), " (",
+    fmt_pct(stats_summer$share_women_first), ")"
   )
 )
 ```
@@ -65,8 +65,8 @@ list(
 #| title: "Teilnehmer*innen alltime (Winter)"
 list(
   icon = "people-fill",
-  color = "#0072B2",
-  value = scales::comma(stats_winter$n_total)
+  color = col_winter,
+  value = fmt_n(stats_winter$n_total)
 )
 ```
 
@@ -75,10 +75,10 @@ list(
 list(
   title = paste0("Frauen ", stats_winter$latest_year),
   icon = "gender-female",
-  color = "#0072B2",
+  color = col_winter,
   value = paste0(
-    scales::comma(stats_winter$n_women_current), " (",
-    scales::percent(stats_winter$share_women_current, accuracy = 0.1), ")"
+    fmt_n(stats_winter$n_women_current), " (",
+    fmt_pct(stats_winter$share_women_current), ")"
   )
 )
 ```
@@ -88,10 +88,10 @@ list(
 list(
   title = paste0("Frauen ", stats_winter$first_year_women, " (erstes Jahr)"),
   icon = "calendar-event",
-  color = "#0072B2",
+  color = col_winter,
   value = paste0(
-    scales::comma(stats_winter$n_women_first), " (",
-    scales::percent(stats_winter$share_women_first, accuracy = 0.1), ")"
+    fmt_n(stats_winter$n_women_first), " (",
+    fmt_pct(stats_winter$share_women_first), ")"
   )
 )
 ```
@@ -113,7 +113,7 @@ p <- ggplot(gender_by_year_female, aes(x = Year, y = share, color = Season)) +
   geom_line(linewidth = 1) +
   geom_point(size = 1.5) +
   scale_y_continuous(labels = scales::percent, limits = c(0, NA)) +
-  scale_color_manual(values = c("Summer" = "#E69F00", "Winter" = "#0072B2")) +
+  scale_color_manual(values = c("Summer" = col_summer, "Winter" = col_winter)) +
   labs(
     x = "Jahr",
     y = "Anteil weiblicher Athlet:innen",

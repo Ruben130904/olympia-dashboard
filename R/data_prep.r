@@ -7,6 +7,10 @@ library(tidyverse)
 athlete_events <- read_csv("Data/Raw/athlete_events.csv")
 regions <- read_csv("Data/Raw/noc_regions.csv")
 
+# Hilfsfunktionen
+fmt_n   <- function(x) scales::comma(x)
+fmt_pct <- function(x) scales::percent(x, accuracy = 0.1)
+
 # Daten verarbeiten
 
 gender_by_year <- athlete_events %>%
@@ -75,3 +79,11 @@ get_valuebox_stats <- function(season) {
 
 stats_summer <- get_valuebox_stats("Summer")
 stats_winter <- get_valuebox_stats("Winter")
+
+
+# Layouts
+## Farbpalette festlegen
+
+col_summer <- "#E69F00"
+col_winter <- "#0072B2"
+
