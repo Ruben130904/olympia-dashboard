@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Ruben Gehlen">
+
+<title>Frauen bei den Olympischen Spielen</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="dashboard_files/libs/clipboard/clipboard.min.js"></script>
+<script src="dashboard_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="dashboard_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="dashboard_files/libs/quarto-html/popper.min.js"></script>
+<script src="dashboard_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="dashboard_files/libs/quarto-html/anchor.min.js"></script>
+<link href="dashboard_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="dashboard_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="dashboard_files/libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="dashboard_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="dashboard_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="dashboard_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="dashboard_files/libs/bootstrap/bootstrap-296f51f9b363469fb5e90ed3a96ff594.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="dashboard_files/libs/bootstrap/bootstrap-dark-296f51f9b363469fb5e90ed3a96ff594.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="dashboard_files/libs/bootstrap/bootstrap-296f51f9b363469fb5e90ed3a96ff594.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="dashboard_files/libs/quarto-dashboard/quarto-dashboard.js"></script>
+<script src="dashboard_files/libs/quarto-dashboard/stickythead.js"></script>
+
+
+
+<script src="dashboard_files/libs/quarto-dashboard/web-components.js" type="module"></script>
+<script src="dashboard_files/libs/quarto-dashboard/components.js"></script>
+
+<link href="dashboard_files/libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+
+<script src="dashboard_files/libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="dashboard_files/libs/plotly-binding-4.12.0/plotly.js"></script>
+
+<script src="dashboard_files/libs/typedarray-0.1/typedarray.min.js"></script>
+
+<script src="dashboard_files/libs/jquery-3.5.1/jquery.min.js"></script>
+
+<link href="dashboard_files/libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
+
+<script src="dashboard_files/libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
+
+<link href="dashboard_files/libs/plotly-htmlwidgets-css-2.25.2/plotly-htmlwidgets.css" rel="stylesheet">
+
+<script src="dashboard_files/libs/plotly-main-2.25.2/plotly-latest.min.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="quarto-dashboard dashboard-fill fullcontent quarto-light">
+
+<header id="quarto-dashboard-header">
+<nav class="navbar navbar-expand-md slim" data-bs-theme="dark">
+  <div class="navbar-container container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-controls="dashboard-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+
+
+    <div class="navbar-brand-container">
+
+
+      <div class="navbar-title">
+        <div class="navbar-title-text"><a href="#">Frauen bei den Olympischen Spielen</a></div>
+        
+        <div class="navbar-author">Ruben Gehlen</div>
+      </div>
+    </div>
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-startseite" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#startseite" data-scrolling="false" href="#startseite" aria-controls="startseite" aria-selected="true"><span class="nav-link-text">Startseite</span></a></li><li class="nav-item" role="presentation"><a id="tab-nach-sportart" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#nach-sportart" data-scrolling="false" href="#nach-sportart" aria-controls="nach-sportart" aria-selected="false"><span class="nav-link-text">Nach Sportart</span></a></li><li class="nav-item" role="presentation"><a id="tab-nach-land" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#nach-land" data-scrolling="false" href="#nach-land" aria-controls="nach-land" aria-selected="false"><span class="nav-link-text">Nach Land</span></a></li></ul></div></div>
+</nav>
+</header>
+<div class="page-layout-custom quarto-dashboard-content bslib-gap-spacing html-fill-container bslib-page-fill quarto-dashboard-pages">  
+
+<div class="bslib-grid-item html-fill-item tab-content bslib-grid" data-layout="fill" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div id="startseite" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-startseite">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 40fr) minmax(3em, 60fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header dashboard-card-no-title bslib-navs-card-title">
+
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-1"><li class="nav-item" role="presentation"><a href="#card-tabset-1-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Sommerspiele" aria-selected="true" class="nav-link active">Sommerspiele</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Winterspiele" aria-selected="false" class="nav-link">Winterspiele</a></li></ul></div>
+
+
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-1"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-1"><div class="card-body html-fill-item html-fill-container" data-title="Sommerspiele">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()" style=" background: #E69F00;">
+<div class="card-body html-fill-item html-fill-container">
+<div data-icon="people-fill" class="html-fill-item html-fill-container value-box-grid">
+<div class="value-box-showcase html-fill-item html-fill-container">
+
+<i class="bi bi-people-fill"></i></div>
+<div class="value-box-area">
+<p class="value-box-title">
+Teilnehmer*innen alltime (Sommer)
+</p>
+<p class="value-box-value">
+116,776
+</p>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()" style=" background: #E69F00;">
+<div class="card-body html-fill-item html-fill-container">
+<div data-title="Frauen 2016" data-icon="gender-female" class="html-fill-item html-fill-container value-box-grid">
+<div class="value-box-showcase html-fill-item html-fill-container">
+
+<i class="bi bi-gender-female"></i></div>
+<div class="value-box-area">
+<p class="value-box-title">
+Frauen 2016
+</p>
+<p class="value-box-value">
+5,034 (45.0%)
+</p>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()" style=" background: #E69F00;">
+<div class="card-body html-fill-item html-fill-container">
+<div data-title="Frauen 1900 (erstes Jahr)" data-icon="calendar-event" class="html-fill-item html-fill-container value-box-grid">
+<div class="value-box-showcase html-fill-item html-fill-container">
+
+<i class="bi bi-calendar-event"></i></div>
+<div class="value-box-area">
+<p class="value-box-title">
+Frauen 1900 (erstes Jahr)
+</p>
+<p class="value-box-value">
+23 (1.9%)
+</p>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-2"><div class="card-body html-fill-item html-fill-container" data-title="Winterspiele">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()" style=" background: #0072B2;">
+<div class="card-body html-fill-item html-fill-container">
+<div data-icon="people-fill" class="html-fill-item html-fill-container value-box-grid">
+<div class="value-box-showcase html-fill-item html-fill-container">
+
+<i class="bi bi-people-fill"></i></div>
+<div class="value-box-area">
+<p class="value-box-title">
+Teilnehmer*innen alltime (Winter)
+</p>
+<p class="value-box-value">
+18,958
+</p>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()" style=" background: #0072B2;">
+<div class="card-body html-fill-item html-fill-container">
+<div data-title="Frauen 2014" data-icon="gender-female" class="html-fill-item html-fill-container value-box-grid">
+<div class="value-box-showcase html-fill-item html-fill-container">
+
+<i class="bi bi-gender-female"></i></div>
+<div class="value-box-area">
+<p class="value-box-title">
+Frauen 2014
+</p>
+<p class="value-box-value">
+1,102 (40.1%)
+</p>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()" style=" background: #0072B2;">
+<div class="card-body html-fill-item html-fill-container">
+<div data-title="Frauen 1924 (erstes Jahr)" data-icon="calendar-event" class="html-fill-item html-fill-container value-box-grid">
+<div class="value-box-showcase html-fill-item html-fill-container">
+
+<i class="bi bi-calendar-event"></i></div>
+<div class="value-box-area">
+<p class="value-box-title">
+Frauen 1924 (erstes Jahr)
+</p>
+<p class="value-box-value">
+13 (4.2%)
+</p>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div></div></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Frauenanteil bei Olympischen Spielen über Zeit" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Frauenanteil bei Olympischen Spielen über Zeit
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-dfc367981ee9dc0ad145" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-dfc367981ee9dc0ad145">{"x":{"data":[{"x":[1900,1904,1906,1908,1912,1920,1924,1928,1932,1936,1948,1952,1956,1960,1964,1968,1972,1976,1980,1984,1988,1992,1996,2000,2004,2008,2012,2016],"y":[0.018790849673202614,0.0092307692307692316,0.0071343638525564806,0.021739130434782608,0.022000830220008302,0.02914798206278027,0.047911547911547912,0.096088697259008315,0.10457856399583768,0.08050847457627118,0.10131758291685597,0.10563665855636659,0.11472960860472065,0.11453662182361735,0.13237298033871911,0.14087801367398345,0.14900196795052009,0.20747571216861518,0.21353869556949989,0.23080317740511916,0.26058670451857108,0.29011293415725548,0.34016829480607408,0.38207945900253593,0.40731268352751726,0.42288283328745757,0.44252163164400493,0.45030861436622238],"text":["Year: 1900<br />share: 0.018790850<br />Season: Summer","Year: 1904<br />share: 0.009230769<br />Season: Summer","Year: 1906<br />share: 0.007134364<br />Season: Summer","Year: 1908<br />share: 0.021739130<br />Season: Summer","Year: 1912<br />share: 0.022000830<br />Season: Summer","Year: 1920<br />share: 0.029147982<br />Season: Summer","Year: 1924<br />share: 0.047911548<br />Season: Summer","Year: 1928<br />share: 0.096088697<br />Season: Summer","Year: 1932<br />share: 0.104578564<br />Season: Summer","Year: 1936<br />share: 0.080508475<br />Season: Summer","Year: 1948<br />share: 0.101317583<br />Season: Summer","Year: 1952<br />share: 0.105636659<br />Season: Summer","Year: 1956<br />share: 0.114729609<br />Season: Summer","Year: 1960<br />share: 0.114536622<br />Season: Summer","Year: 1964<br />share: 0.132372980<br />Season: Summer","Year: 1968<br />share: 0.140878014<br />Season: Summer","Year: 1972<br />share: 0.149001968<br />Season: Summer","Year: 1976<br />share: 0.207475712<br />Season: Summer","Year: 1980<br />share: 0.213538696<br />Season: Summer","Year: 1984<br />share: 0.230803177<br />Season: Summer","Year: 1988<br />share: 0.260586705<br />Season: Summer","Year: 1992<br />share: 0.290112934<br />Season: Summer","Year: 1996<br />share: 0.340168295<br />Season: Summer","Year: 2000<br />share: 0.382079459<br />Season: Summer","Year: 2004<br />share: 0.407312684<br />Season: Summer","Year: 2008<br />share: 0.422882833<br />Season: Summer","Year: 2012<br />share: 0.442521632<br />Season: Summer","Year: 2016<br />share: 0.450308614<br />Season: Summer"],"type":"scatter","mode":"lines+markers","line":{"width":3.7795275590551185,"color":"rgba(230,159,0,1)","dash":"solid"},"hoveron":"points","name":"Summer","legendgroup":"Summer","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(230,159,0,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(230,159,0,1)"}},"frame":null},{"x":[1924,1928,1932,1936,1948,1952,1956,1960,1964,1968,1972,1976,1980,1984,1988,1992,1994,1998,2002,2006,2010,2014],"y":[0.041533546325878593,0.060737527114967459,0.083333333333333329,0.11976047904191617,0.11526946107784432,0.15706051873198848,0.1607795371498173,0.21654135338345865,0.18281535648994515,0.18189655172413793,0.20436507936507936,0.2047872340425532,0.21942110177404295,0.21759622937941869,0.22105263157894736,0.27096057745696833,0.30034522439585731,0.36209270307480496,0.36932055022926219,0.38291900561347231,0.40733438485804419,0.40145719489981785],"text":["Year: 1924<br />share: 0.041533546<br />Season: Winter","Year: 1928<br />share: 0.060737527<br />Season: Winter","Year: 1932<br />share: 0.083333333<br />Season: Winter","Year: 1936<br />share: 0.119760479<br />Season: Winter","Year: 1948<br />share: 0.115269461<br />Season: Winter","Year: 1952<br />share: 0.157060519<br />Season: Winter","Year: 1956<br />share: 0.160779537<br />Season: Winter","Year: 1960<br />share: 0.216541353<br />Season: Winter","Year: 1964<br />share: 0.182815356<br />Season: Winter","Year: 1968<br />share: 0.181896552<br />Season: Winter","Year: 1972<br />share: 0.204365079<br />Season: Winter","Year: 1976<br />share: 0.204787234<br />Season: Winter","Year: 1980<br />share: 0.219421102<br />Season: Winter","Year: 1984<br />share: 0.217596229<br />Season: Winter","Year: 1988<br />share: 0.221052632<br />Season: Winter","Year: 1992<br />share: 0.270960577<br />Season: Winter","Year: 1994<br />share: 0.300345224<br />Season: Winter","Year: 1998<br />share: 0.362092703<br />Season: Winter","Year: 2002<br />share: 0.369320550<br />Season: Winter","Year: 2006<br />share: 0.382919006<br />Season: Winter","Year: 2010<br />share: 0.407334385<br />Season: Winter","Year: 2014<br />share: 0.401457195<br />Season: Winter"],"type":"scatter","mode":"lines+markers","line":{"width":3.7795275590551185,"color":"rgba(0,114,178,1)","dash":"solid"},"hoveron":"points","name":"Winter","legendgroup":"Winter","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(0,114,178,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,114,178,1)"}},"frame":null}],"layout":{"margin":{"t":24.634288086342885,"r":8.6342880863428846,"b":44.034869240348698,"l":50.942299709423011},"paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":17.268576172685762},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1894.2,2021.8],"tickmode":"array","ticktext":["1900","1925","1950","1975","2000"],"tickvals":[1900,1925,1950,1975,2000],"categoryorder":"array","categoryarray":["1900","1925","1950","1975","2000"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":4.3171440431714405,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":13.814860938148611},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.78493528057662576,"zeroline":false,"anchor":"y","title":{"text":"Jahr","font":{"color":"rgba(0,0,0,1)","family":"","size":17.268576172685762}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.022515430718311122,0.47282404508453352],"tickmode":"array","ticktext":["0%","10%","20%","30%","40%"],"tickvals":[0,0.10000000000000001,0.20000000000000001,0.30000000000000004,0.40000000000000002],"categoryorder":"array","categoryarray":["0%","10%","20%","30%","40%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":4.3171440431714423,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":13.814860938148612},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.78493528057662576,"zeroline":false,"anchor":"x","title":{"text":"Anteil weiblicher Athlet:innen","font":{"color":"rgba(0,0,0,1)","family":"","size":17.268576172685762}},"hoverformat":".2f"},"shapes":[],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":13.814860938148611},"title":{"text":"Saison","font":{"color":"rgba(0,0,0,1)","family":"","size":17.268576172685762}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"1ee421c2538d":{"x":{},"y":{},"colour":{},"type":"scatter"},"1ee437431591":{"x":{},"y":{},"colour":{}}},"cur_data":"1ee421c2538d","visdat":{"1ee421c2538d":["function (y) ","x"],"1ee437431591":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div>
+</div>
+<div id="nach-sportart" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-nach-sportart">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header dashboard-card-no-title bslib-navs-card-title">
+
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-9"><li class="nav-item" role="presentation"><a href="#card-tabset-9-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Nach Sportart über Zeit" aria-selected="true" class="nav-link active">Nach Sportart über Zeit</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-9-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Aktueller Vergleich" aria-selected="false" class="nav-link">Aktueller Vergleich</a></li></ul></div>
+
+
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-9"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-9-1"><div class="card-body html-fill-item html-fill-container" data-title="Nach Sportart über Zeit">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 82fr) minmax(3em, 18fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-9f80fd0ffa22f8384be0" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-9f80fd0ffa22f8384be0">{"x":{"data":[{"x":[1936,1948,1952,1956,1960,1964,1968,1972,1976,1980,1984,1988,1992,1994,1998,2002,2006,2010,2014],"y":[0.35922330097087379,0.23952095808383234,0.31325301204819278,0.32240437158469948,0.38345864661654133,0.31609195402298851,0.2879581151832461,0.34965034965034963,0.30939226519337015,0.37931034482758619,0.33777777777777779,0.34926470588235292,0.34579439252336447,0.44,0.43373493975903615,0.43525179856115109,0.41463414634146339,0.43042071197411003,0.4140127388535032],"text":"Alpine Skiing","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(248,118,109,0.3)","dash":"solid"},"hoveron":"points","name":"Alpine Skiing","legendgroup":"Alpine Skiing","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1936],"y":[0.5],"text":"Alpinism","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(243,123,89,0.3)","dash":"solid"},"hoveron":"points","name":"Alpinism","legendgroup":"Alpinism","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1904,1908,1972,1976,1980,1984,1988,1992,1996,2000,2004,2008,2012,2016],"y":[0.20689655172413793,0.43859649122807015,0.42105263157894735,0.421875,0.43283582089552236,0.43119266055045874,0.42465753424657532,0.4485294117647059,0.5,0.5,0.5,0.5,0.5,0.5],"text":"Archery","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(237,129,65,0.3)","dash":"solid"},"hoveron":"points","name":"Archery","legendgroup":"Archery","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1920,1924,1928,1932,1936,1948],"y":[0.090909090909090912,0.1111111111111111,0.10270270270270271,0.12755102040816327,0.058823529411764705,0.16060606060606061],"text":"Art Competitions","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(231,134,27,0.3)","dash":"solid"},"hoveron":"points","name":"Art Competitions","legendgroup":"Art Competitions","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1928,1932,1936,1948,1952,1956,1960,1964,1968,1972,1976,1980,1984,1988,1992,1996,2000,2004,2008,2012,2016],"y":[0.13456090651558072,0.13989637305699482,0.12628865979381443,0.19328859060402684,0.19418483904465214,0.20416666666666666,0.20078740157480315,0.23182711198428291,0.23615160349854228,0.27744360902255638,0.30119284294234594,0.27708333333333335,0.30078125,0.34301606922126082,0.36037079953650059,0.36703937773456491,0.41179223210107629,0.45914786967418547,0.47373540856031127,0.47667147667147669,0.4777434993389158],"text":"Athletics","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(224,139,0,0.3)","dash":"solid"},"hoveron":"points","name":"Athletics","legendgroup":"Athletics","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1992,1996,2000,2004,2008,2012,2016],"y":[0.47457627118644069,0.5,0.49707602339181284,0.48255813953488375,0.49710982658959535,0.5,0.5],"text":"Badminton","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(216,144,0,0.3)","dash":"solid"},"hoveron":"points","name":"Badminton","legendgroup":"Badminton","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1976,1980,1984,1988,1992,1996,2000,2004,2008,2012,2016],"y":[0.3380281690140845,0.33488372093023255,0.33333333333333331,0.3940677966101695,0.39830508474576271,0.50352112676056338,0.49650349650349651,0.49825783972125437,0.49825783972125437,0.49825783972125437,0.49822064056939502],"text":"Basketball","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(207,148,0,0.3)","dash":"solid"},"hoveron":"points","name":"Basketball","legendgroup":"Basketball","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1996,2000,2004,2008,2012,2016],"y":[0.42857142857142855,0.5,0.5,0.5,0.5,0.5],"text":"Beach Volleyball","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(197,153,0,0.3)","dash":"solid"},"hoveron":"points","name":"Beach Volleyball","legendgroup":"Beach Volleyball","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1992,1994,1998,2002,2006,2010,2014],"y":[0.40816326530612246,0.48704663212435234,0.47540983606557374,0.4631578947368421,0.47549019607843135,0.48529411764705882,0.48529411764705882],"text":"Biathlon","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(187,157,0,0.3)","dash":"solid"},"hoveron":"points","name":"Biathlon","legendgroup":"Biathlon","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2002,2006,2010,2014],"y":[0.15384615384615385,0.21333333333333335,0.26415094339622641,0.22674418604651161],"text":"Bobsleigh","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(175,161,0,0.3)","dash":"solid"},"hoveron":"points","name":"Bobsleigh","legendgroup":"Bobsleigh","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2012,2016],"y":[0.12720848056537101,0.12720848056537101],"text":"Boxing","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(163,165,0,0.3)","dash":"solid"},"hoveron":"points","name":"Boxing","legendgroup":"Boxing","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1948,1952,1956,1960,1964,1968,1972,1976,1980,1984,1988,1992,1996,2000,2004,2008,2012,2016],"y":[0.090909090909090912,0.081761006289308172,0.088495575221238937,0.16184971098265896,0.18620689655172415,0.15760869565217392,0.16969696969696971,0.15918367346938775,0.17777777777777778,0.18974358974358974,0.23272727272727273,0.23863636363636365,0.26829268292682928,0.24545454545454545,0.28658536585365851,0.2878787878787879,0.33433734939759036,0.33939393939393941],"text":"Canoeing","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(149,169,0,0.3)","dash":"solid"},"hoveron":"points","name":"Canoeing","legendgroup":"Canoeing","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1900],"y":[0.29999999999999999],"text":"Croquet","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(133,173,0,0.3)","dash":"solid"},"hoveron":"points","name":"Croquet","legendgroup":"Croquet","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1952,1956,1960,1964,1968,1972,1976,1980,1984,1988,1992,1994,1998,2002,2006,2010,2014],"y":[0.14492753623188406,0.27333333333333332,0.21428571428571427,0.25165562913907286,0.25170068027210885,0.31578947368421051,0.31097560975609756,0.34615384615384615,0.36312849162011174,0.3888888888888889,0.37668161434977576,0.40609137055837563,0.44933920704845814,0.41153846153846152,0.40390879478827363,0.44178082191780821,0.41946308724832215],"text":"Cross Country Skiing","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(114,176,0,0.3)","dash":"solid"},"hoveron":"points","name":"Cross Country Skiing","legendgroup":"Cross Country Skiing","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1998,2002,2006,2010,2014],"y":[0.5,0.48958333333333331,0.50549450549450547,0.4946236559139785,0.4942528735632184],"text":"Curling","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(91,179,0,0.3)","dash":"solid"},"hoveron":"points","name":"Curling","legendgroup":"Curling","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1984,1988,1992,1996,2000,2004,2008,2012,2016],"y":[0.12534818941504178,0.15165876777251186,0.16629711751662971,0.23270440251572327,0.26190476190476192,0.28017241379310343,0.28937007874015747,0.3592814371257485,0.3742690058479532],"text":"Cycling","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(57,182,0,0.3)","dash":"solid"},"hoveron":"points","name":"Cycling","legendgroup":"Cycling","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1912,1920,1924,1928,1932,1936,1948,1952,1956,1960,1964,1968,1972,1976,1980,1984,1988,1992,1996,2000,2004,2008,2012,2016],"y":[0.24561403508771928,0.33962264150943394,0.36619718309859156,0.37704918032786883,0.39285714285714285,0.43478260869565216,0.38095238095238093,0.32894736842105265,0.45000000000000001,0.34666666666666668,0.42499999999999999,0.44444444444444442,0.45054945054945056,0.48749999999999999,0.4925373134328358,0.4375,0.449438202247191,0.54000000000000004,0.45901639344262296,0.49044585987261147,0.50387596899224807,0.52142857142857146,0.5,0.5],"text":"Diving","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,184,32,0.3)","dash":"solid"},"hoveron":"points","name":"Diving","legendgroup":"Diving","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1900,1952,1956,1960,1964,1968,1972,1976,1980,1984,1988,1992,1996,2000,2004,2008,2012,2016],"y":[0.034482758620689655,0.029850746268656716,0.082278481012658222,0.050314465408805034,0.11206896551724138,0.17599999999999999,0.17318435754189945,0.17777777777777778,0.13235294117647059,0.29936305732484075,0.2967032967032967,0.3116279069767442,0.30136986301369861,0.34358974358974359,0.3251231527093596,0.37823834196891193,0.38693467336683418,0.375],"text":"Equestrianism","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,186,66,0.3)","dash":"solid"},"hoveron":"points","name":"Equestrianism","legendgroup":"Equestrianism","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1924,1928,1932,1936,1948,1952,1956,1960,1964,1968,1972,1976,1980,1984,1988,1992,1996,2000,2004,2008,2012,2016],"y":[0.10416666666666667,0.10424710424710425,0.15740740740740741,0.13183279742765272,0.1326530612244898,0.12937062937062938,0.1393939393939394,0.22674418604651161,0.21621621621621623,0.21090909090909091,0.21739130434782608,0.24911032028469751,0.27272727272727271,0.22900763358778625,0.21766561514195584,0.23278688524590163,0.39285714285714285,0.38248847926267282,0.41891891891891891,0.49572649572649574,0.50409836065573765,0.5061224489795918],"text":"Fencing","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,188,89,0.3)","dash":"solid"},"hoveron":"points","name":"Fencing","legendgroup":"Fencing","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1908,1920,1924,1928,1932,1936,1948,1952,1956,1960,1964,1968,1972,1976,1980,1984,1988,1992,1994,1998,2002,2006,2010,2014],"y":[0.33333333333333331,0.46153846153846156,0.44827586206896552,0.5490196078431373,0.53846153846153844,0.51190476190476186,0.578125,0.58730158730158732,0.5423728813559322,0.54929577464788737,0.53409090909090906,0.52083333333333337,0.52238805970149249,0.50476190476190474,0.52380952380952384,0.5,0.51162790697674421,0.49624060150375937,0.51162790697674421,0.49655172413793103,0.49650349650349651,0.49659863945578231,0.5,0.49664429530201343],"text":"Figure Skating","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,190,108,0.3)","dash":"solid"},"hoveron":"points","name":"Figure Skating","legendgroup":"Figure Skating","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1996,2000,2004,2008,2012,2016],"y":[0.31958762886597936,0.31713554987212278,0.39058823529411762,0.41577825159914711,0.42826552462526768,0.42917547568710357],"text":"Football","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,191,125,0.3)","dash":"solid"},"hoveron":"points","name":"Football","legendgroup":"Football","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1992,1994,1998,2002,2006,2010,2014],"y":[0.3380281690140845,0.46391752577319589,0.47272727272727272,0.47619047619047616,0.45689655172413796,0.4941860465116279,0.46946564885496184],"text":"Freestyle Skiing","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,192,141,0.3)","dash":"solid"},"hoveron":"points","name":"Freestyle Skiing","legendgroup":"Freestyle Skiing","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1900,2016],"y":[0.45454545454545453,0.5],"text":"Golf","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,193,156,0.3)","dash":"solid"},"hoveron":"points","name":"Golf","legendgroup":"Golf","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1928,1936,1948,1952,1956,1960,1964,1968,1972,1976,1980,1984,1988,1992,1996,2000,2004,2008,2012,2016],"y":[0.3888888888888889,0.36571428571428571,0.41706161137440756,0.42006269592476492,0.5078125,0.48818897637795278,0.38967136150234744,0.46330275229357798,0.51082251082251084,0.48863636363636365,0.48818897637795278,0.47794117647058826,0.5027932960893855,0.49729729729729732,0.4861111111111111,0.5,0.5,0.5,0.49743589743589745,0.5],"text":"Gymnastics","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,193,170,0.3)","dash":"solid"},"hoveron":"points","name":"Gymnastics","legendgroup":"Gymnastics","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1976,1980,1984,1988,1992,1996,2000,2004,2008,2012,2016],"y":[0.33744855967078191,0.33064516129032256,0.31660231660231658,0.39501779359430605,0.38698630136986301,0.39333333333333331,0.45201238390092879,0.45426829268292684,0.49854227405247814,0.49279538904899134,0.49858356940509913],"text":"Handball","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,192,184,0.3)","dash":"solid"},"hoveron":"points","name":"Handball","legendgroup":"Handball","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1980,1984,1988,1992,1996,2000,2004,2008,2012,2016],"y":[0.48663101604278075,0.33566433566433568,0.39490445859872614,0.39808917197452232,0.40000000000000002,0.45428571428571429,0.45454545454545453,0.49354005167958659,0.49354005167958659,0.49743589743589745],"text":"Hockey","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,191,196,0.3)","dash":"solid"},"hoveron":"points","name":"Hockey","legendgroup":"Hockey","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1998,2002,2006,2010,2014],"y":[0.28169014084507044,0.33333333333333331,0.36199095022624433,0.38095238095238093,0.35665914221218964],"text":"Ice Hockey","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,189,208,0.3)","dash":"solid"},"hoveron":"points","name":"Ice Hockey","legendgroup":"Ice Hockey","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1992,1996,2000,2004,2008,2012,2016],"y":[0.37644341801385683,0.39018087855297157,0.40452261306532661,0.40885416666666669,0.40414507772020725,0.3984375,0.39074550128534702],"text":"Judo","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,187,219,0.3)","dash":"solid"},"hoveron":"points","name":"Judo","legendgroup":"Judo","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1964,1968,1972,1976,1980,1984,1988,1992,1994,1998,2002,2006,2010,2014],"y":[0.25,0.30588235294117649,0.26506024096385544,0.27659574468085107,0.32500000000000001,0.33333333333333331,0.26666666666666666,0.2696629213483146,0.27173913043478259,0.31182795698924731,0.26363636363636361,0.27777777777777779,0.27102803738317754,0.28703703703703703],"text":"Luge","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,184,229,0.3)","dash":"solid"},"hoveron":"points","name":"Luge","legendgroup":"Luge","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2000,2004,2008,2012,2016],"y":[0.5,0.5,0.5,0.5,0.5],"text":"Modern Pentathlon","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,180,239,0.3)","dash":"solid"},"hoveron":"points","name":"Modern Pentathlon","legendgroup":"Modern Pentathlon","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1908],"y":[0.071428571428571425],"text":"Motorboating","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,176,246,0.3)","dash":"solid"},"hoveron":"points","name":"Motorboating","legendgroup":"Motorboating","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1976,1980,1984,1988,1992,1996,2000,2004,2008,2012,2016],"y":[0.34569983136593591,0.33404255319148934,0.36017897091722595,0.32715008431703202,0.30303030303030304,0.33717105263157893,0.33638025594149906,0.34649910233393177,0.34414414414414413,0.3570127504553734,0.39377289377289376],"text":"Rowing","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,171,253,0.3)","dash":"solid"},"hoveron":"points","name":"Rowing","legendgroup":"Rowing","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2016],"y":[0.49498327759197325],"text":"Rugby Sevens","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,165,255,0.3)","dash":"solid"},"hoveron":"points","name":"Rugby Sevens","legendgroup":"Rugby Sevens","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1900,1908,1920,1924,1928,1936,1952,1960,1964,1976,1980,1984,1988,1992,1996,2000,2004,2008,2012,2016],"y":[0.010416666666666666,0.015625,0.0099009900990099011,0.015384615384615385,0.015748031496062992,0.017441860465116279,0.013215859030837005,0.0034482758620689655,0.0044444444444444444,0.0038910505836575876,0.00641025641025641,0.0066666666666666671,0.11733333333333333,0.19047619047619047,0.2183406113537118,0.23631840796019901,0.34749999999999998,0.34749999999999998,0.37467018469656993,0.42894736842105263],"text":"Sailing","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(82,158,255,0.3)","dash":"solid"},"hoveron":"points","name":"Sailing","legendgroup":"Sailing","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1968,1972,1976,1980,1984,1988,1992,1996,2000,2004,2008,2012,2016],"y":[0.0085470085470085479,0.010075566750629723,0.023255813953488372,0.020920502092050208,0.16739130434782609,0.28030303030303028,0.28746928746928746,0.29832935560859186,0.35784313725490197,0.35128205128205126,0.37179487179487181,0.40769230769230769,0.38717948717948719],"text":"Shooting","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(121,151,255,0.3)","dash":"solid"},"hoveron":"points","name":"Shooting","legendgroup":"Shooting","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1992,1994,1998,2002,2006,2010,2014],"y":[0.48837209302325579,0.47126436781609193,0.47872340425531917,0.45945945945945948,0.49056603773584906,0.50458715596330272,0.47169811320754718],"text":"Short Track Speed Skating","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(149,144,255,0.3)","dash":"solid"},"hoveron":"points","name":"Short Track Speed Skating","legendgroup":"Short Track Speed Skating","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2002,2006,2010,2014],"y":[0.33333333333333331,0.35714285714285715,0.40425531914893614,0.41304347826086957],"text":"Skeleton","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(172,136,255,0.3)","dash":"solid"},"hoveron":"points","name":"Skeleton","legendgroup":"Skeleton","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2014],"y":[0.3125],"text":"Ski Jumping","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(191,128,255,0.3)","dash":"solid"},"hoveron":"points","name":"Ski Jumping","legendgroup":"Ski Jumping","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1998,2002,2006,2010,2014],"y":[0.44800000000000001,0.44915254237288138,0.42245989304812837,0.43783783783783786,0.43459915611814348],"text":"Snowboarding","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(207,120,255,0.3)","dash":"solid"},"hoveron":"points","name":"Snowboarding","legendgroup":"Snowboarding","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1960,1964,1968,1972,1976,1980,1984,1988,1992,1994,1998,2002,2006,2010,2014],"y":[0.29126213592233008,0.32089552238805968,0.33333333333333331,0.43220338983050849,0.40540540540540543,0.421875,0.37410071942446044,0.37588652482269502,0.38311688311688313,0.40666666666666668,0.46198830409356723,0.42771084337349397,0.44252873563218392,0.46892655367231639,0.46892655367231639],"text":"Speed Skating","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(220,113,250,0.3)","dash":"solid"},"hoveron":"points","name":"Speed Skating","legendgroup":"Speed Skating","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1912,1920,1924,1928,1932,1936,1948,1952,1956,1960,1964,1968,1972,1976,1980,1984,1988,1992,1996,2000,2004,2008,2012,2016],"y":[0.22500000000000001,0.20689655172413793,0.30177514792899407,0.39560439560439559,0.34375,0.37903225806451613,0.3534136546184739,0.36990595611285265,0.42127659574468085,0.37894736842105264,0.40000000000000002,0.4358974358974359,0.46052631578947367,0.44161358811040341,0.42942942942942941,0.37651821862348178,0.3981042654028436,0.39937597503900157,0.452755905511811,0.41509433962264153,0.4194236926360726,0.44324853228962818,0.48335123523093448,0.46496815286624205],"text":"Swimming","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(231,107,243,0.3)","dash":"solid"},"hoveron":"points","name":"Swimming","legendgroup":"Swimming","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1988,1992,1996,2000,2004,2008,2012,2016],"y":[0.37209302325581395,0.49685534591194969,0.48795180722891568,0.49707602339181284,0.5,0.49707602339181284,0.50574712643678166,0.5],"text":"Table Tennis","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(240,102,234,0.3)","dash":"solid"},"hoveron":"points","name":"Table Tennis","legendgroup":"Table Tennis","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2000,2004,2008,2012,2016],"y":[0.47058823529411764,0.4838709677419355,0.5,0.5,0.50793650793650791],"text":"Taekwondo","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(247,99,224,0.3)","dash":"solid"},"hoveron":"points","name":"Taekwondo","legendgroup":"Taekwondo","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1900,1906,1908,1912,1920,1924,1988,1992,1996,2000,2004,2008,2012,2016],"y":[0.26923076923076922,0.22222222222222221,0.20000000000000001,0.16250000000000001,0.30666666666666664,0.28225806451612906,0.37209302325581395,0.49152542372881358,0.47159090909090912,0.48901098901098899,0.48823529411764705,0.4911242603550296,0.48369565217391303,0.4642857142857143],"text":"Tennis","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(252,97,213,0.3)","dash":"solid"},"hoveron":"points","name":"Tennis","legendgroup":"Tennis","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2000,2004,2008,2012,2016],"y":[0.5,0.5,0.5,0.5,0.5],"text":"Trampolining","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(255,97,201,0.3)","dash":"solid"},"hoveron":"points","name":"Trampolining","legendgroup":"Trampolining","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2000,2004,2008,2012,2016],"y":[0.47999999999999998,0.50505050505050508,0.5,0.5,0.5],"text":"Triathlon","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(255,98,188,0.3)","dash":"solid"},"hoveron":"points","name":"Triathlon","legendgroup":"Triathlon","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1964,1968,1972,1976,1980,1984,1988,1992,1996,2000,2004,2008,2012,2016],"y":[0.37988826815642457,0.42233009708737862,0.39393939393939392,0.44444444444444442,0.44117647058823528,0.43269230769230771,0.39748953974895396,0.38528138528138528,0.48727272727272725,0.4946236559139785,0.49469964664310956,0.49469964664310956,0.49825783972125437,0.50176678445229683],"text":"Volleyball","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(255,101,174,0.3)","dash":"solid"},"hoveron":"points","name":"Volleyball","legendgroup":"Volleyball","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2000,2004,2008,2012,2016],"y":[0.33766233766233766,0.396078431372549,0.40234375,0.39688715953307391,0.40310077519379844],"text":"Water Polo","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(255,104,159,0.3)","dash":"solid"},"hoveron":"points","name":"Water Polo","legendgroup":"Water Polo","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2000,2004,2008,2012,2016],"y":[0.34552845528455284,0.34136546184738958,0.34387351778656128,0.40873015873015872,0.40392156862745099],"text":"Weightlifting","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(255,108,144,0.3)","dash":"solid"},"hoveron":"points","name":"Weightlifting","legendgroup":"Weightlifting","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2004,2008,2012,2016],"y":[0.14619883040935672,0.1924198250728863,0.22418879056047197,0.32369942196531792],"text":"Wrestling","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(252,113,127,0.3)","dash":"solid"},"hoveron":"points","name":"Wrestling","legendgroup":"Wrestling","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":24.634288086342885,"r":8.6342880863428846,"b":44.034869240348698,"l":50.942299709423011},"paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":17.268576172685762},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1894.2,2021.8],"tickmode":"array","ticktext":["1900","1925","1950","1975","2000"],"tickvals":[1900,1925,1950,1975,2000],"categoryorder":"array","categoryarray":["1900","1925","1950","1975","2000"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":4.3171440431714405,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":13.814860938148611},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.78493528057662576,"zeroline":false,"anchor":"y","title":{"text":"Jahr","font":{"color":"rgba(0,0,0,1)","family":"","size":17.268576172685762}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.029365079365079368,0.6166666666666667],"tickmode":"array","ticktext":["0%","20%","40%","60%"],"tickvals":[0,0.20000000000000001,0.40000000000000002,0.60000000000000009],"categoryorder":"array","categoryarray":["0%","20%","40%","60%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":4.3171440431714423,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":13.814860938148612},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.78493528057662576,"zeroline":false,"anchor":"x","title":{"text":"Frauenanteil","font":{"color":"rgba(0,0,0,1)","family":"","size":17.268576172685762}},"hoverformat":".2f"},"shapes":[],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":13.814860938148611},"title":{"text":"Sport","font":{"color":"rgba(0,0,0,1)","family":"","size":17.268576172685762}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"1ee412d9210c":{"x":{},"y":{},"text":{},"colour":{},"type":"scatter"}},"cur_data":"1ee412d9210c","visdat":{"1ee412d9210c":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div><div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<p><strong>Hinweis:</strong> Reine Frauensportarten (z.B. Synchronschwimmen, Rhythmische Sportgymnastik) sowie reine Männersportarten sind hier nicht dargestellt, da ihr Anteil konstant bei 100 % bzw. 0 % liegt und keine Entwicklung zeigt.</p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-9-2"><div class="card-body html-fill-item html-fill-container" data-title="Aktueller Vergleich">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<!-- ```{r}
+p3 <- gender_by_sport_current |> 
+  mutate(Sport = fct_reorder(Sport, share)) |> 
+  ggplot(aes(x = share, y = Sport, fill = Season)) +
+  geom_col() +
+  geom_vline(xintercept = 0.5, linetype = "dashed", color = "grey40") +
+  scale_x_continuous(labels = scales::percent, limits = c(0, 1)) +
+  scale_fill_manual(values = c("Summer" = "#E69F00", "Winter" = "#0072B2")) +
+  labs(
+    x = "Frauenanteil (aktuellstes Jahr)",
+    y = NULL,
+    fill = "Saison"
+  ) +
+  theme_minimal(base_size = 7)
+
+ggplotly(p3, height = 1200)
+``` --><div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-d5d668b84a81c6cbb724" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-d5d668b84a81c6cbb724">{"x":{"data":[{"orientation":"v","width":[0.5,0.4777434993389158,0.5,0.49822064056939502,0.5,0.12720848056537101,0.33939393939393941,0.3742690058479532,0.5,0.375,0.5061224489795918,0.42917547568710357,0.5,0.5,0.49858356940509913,0.49743589743589745,0.39074550128534702,0.5,1,0.39377289377289376,0.49498327759197325,0.42894736842105263,0.38717948717948719,0.46496815286624205,1,0.5,0.50793650793650791,0.4642857142857143,0.5,0.5,0.50176678445229683,0.40310077519379844,0.40392156862745099,0.32369942196531792],"base":[33.549999999999997,25.550000000000001,34.549999999999997,31.550000000000001,35.549999999999997,0.55000000000000004,5.5499999999999998,7.5499999999999998,36.549999999999997,8.5500000000000007,44.549999999999997,18.550000000000001,37.549999999999997,38.549999999999997,32.549999999999997,30.550000000000001,10.550000000000001,39.549999999999997,46.549999999999997,11.550000000000001,28.550000000000001,17.550000000000001,9.5500000000000007,21.550000000000001,47.549999999999997,40.549999999999997,45.549999999999997,20.550000000000001,41.549999999999997,42.549999999999997,43.549999999999997,12.550000000000001,13.550000000000001,4.5499999999999998],"x":[0.25,0.2388717496694579,0.25,0.24911032028469751,0.25,0.063604240282685506,0.16969696969696971,0.1871345029239766,0.25,0.1875,0.2530612244897959,0.21458773784355178,0.25,0.25,0.24929178470254956,0.24871794871794872,0.19537275064267351,0.25,0.5,0.19688644688644688,0.24749163879598662,0.21447368421052632,0.1935897435897436,0.23248407643312102,0.5,0.25,0.25396825396825395,0.23214285714285715,0.25,0.25,0.25088339222614842,0.20155038759689922,0.20196078431372549,0.16184971098265896],"y":[0.90000000000000568,0.89999999999999858,0.90000000000000568,0.90000000000000213,0.90000000000000568,0.89999999999999991,0.90000000000000036,0.89999999999999947,0.90000000000000568,0.89999999999999858,0.90000000000000568,0.89999999999999858,0.90000000000000568,0.90000000000000568,0.90000000000000568,0.89999999999999858,0.89999999999999858,0.90000000000000568,0.90000000000000568,0.89999999999999858,0.89999999999999858,0.89999999999999858,0.89999999999999858,0.89999999999999858,0.90000000000000568,0.90000000000000568,0.90000000000000568,0.89999999999999858,0.90000000000000568,0.90000000000000568,0.90000000000000568,0.89999999999999858,0.89999999999999858,0.90000000000000036],"text":["Archery (Summer, 2016)<br />Frauenanteil: 50.0%","Athletics (Summer, 2016)<br />Frauenanteil: 47.8%","Badminton (Summer, 2016)<br />Frauenanteil: 50.0%","Basketball (Summer, 2016)<br />Frauenanteil: 49.8%","Beach Volleyball (Summer, 2016)<br />Frauenanteil: 50.0%","Boxing (Summer, 2016)<br />Frauenanteil: 12.7%","Canoeing (Summer, 2016)<br />Frauenanteil: 33.9%","Cycling (Summer, 2016)<br />Frauenanteil: 37.4%","Diving (Summer, 2016)<br />Frauenanteil: 50.0%","Equestrianism (Summer, 2016)<br />Frauenanteil: 37.5%","Fencing (Summer, 2016)<br />Frauenanteil: 50.6%","Football (Summer, 2016)<br />Frauenanteil: 42.9%","Golf (Summer, 2016)<br />Frauenanteil: 50.0%","Gymnastics (Summer, 2016)<br />Frauenanteil: 50.0%","Handball (Summer, 2016)<br />Frauenanteil: 49.9%","Hockey (Summer, 2016)<br />Frauenanteil: 49.7%","Judo (Summer, 2016)<br />Frauenanteil: 39.1%","Modern Pentathlon (Summer, 2016)<br />Frauenanteil: 50.0%","Rhythmic Gymnastics (Summer, 2016)<br />Frauenanteil: 100.0%","Rowing (Summer, 2016)<br />Frauenanteil: 39.4%","Rugby Sevens (Summer, 2016)<br />Frauenanteil: 49.5%","Sailing (Summer, 2016)<br />Frauenanteil: 42.9%","Shooting (Summer, 2016)<br />Frauenanteil: 38.7%","Swimming (Summer, 2016)<br />Frauenanteil: 46.5%","Synchronized Swimming (Summer, 2016)<br />Frauenanteil: 100.0%","Table Tennis (Summer, 2016)<br />Frauenanteil: 50.0%","Taekwondo (Summer, 2016)<br />Frauenanteil: 50.8%","Tennis (Summer, 2016)<br />Frauenanteil: 46.4%","Trampolining (Summer, 2016)<br />Frauenanteil: 50.0%","Triathlon (Summer, 2016)<br />Frauenanteil: 50.0%","Volleyball (Summer, 2016)<br />Frauenanteil: 50.2%","Water Polo (Summer, 2016)<br />Frauenanteil: 40.3%","Weightlifting (Summer, 2016)<br />Frauenanteil: 40.4%","Wrestling (Summer, 2016)<br />Frauenanteil: 32.4%"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(230,159,0,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Summer","legendgroup":"Summer","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.4140127388535032,0.48529411764705882,0.22674418604651161,0.41946308724832215,0.4942528735632184,0.49664429530201343,0.46946564885496184,0.35665914221218964,0.28703703703703703,0.47169811320754718,0.41304347826086957,0.3125,0.43459915611814348,0.46892655367231639],"base":[15.550000000000001,26.550000000000001,1.55,16.550000000000001,27.550000000000001,29.550000000000001,23.550000000000001,6.5499999999999998,2.5499999999999998,24.550000000000001,14.550000000000001,3.5499999999999998,19.550000000000001,22.550000000000001],"x":[0.2070063694267516,0.24264705882352941,0.11337209302325581,0.20973154362416108,0.2471264367816092,0.24832214765100671,0.23473282442748092,0.17832957110609482,0.14351851851851852,0.23584905660377359,0.20652173913043478,0.15625,0.21729957805907174,0.2344632768361582],"y":[0.89999999999999858,0.89999999999999858,0.90000000000000013,0.89999999999999858,0.89999999999999858,0.89999999999999858,0.89999999999999858,0.90000000000000036,0.90000000000000036,0.89999999999999858,0.89999999999999858,0.90000000000000036,0.89999999999999858,0.89999999999999858],"text":["Alpine Skiing (Winter, 2014)<br />Frauenanteil: 41.4%","Biathlon (Winter, 2014)<br />Frauenanteil: 48.5%","Bobsleigh (Winter, 2014)<br />Frauenanteil: 22.7%","Cross Country Skiing (Winter, 2014)<br />Frauenanteil: 41.9%","Curling (Winter, 2014)<br />Frauenanteil: 49.4%","Figure Skating (Winter, 2014)<br />Frauenanteil: 49.7%","Freestyle Skiing (Winter, 2014)<br />Frauenanteil: 46.9%","Ice Hockey (Winter, 2014)<br />Frauenanteil: 35.7%","Luge (Winter, 2014)<br />Frauenanteil: 28.7%","Short Track Speed Skating (Winter, 2014)<br />Frauenanteil: 47.2%","Skeleton (Winter, 2014)<br />Frauenanteil: 41.3%","Ski Jumping (Winter, 2014)<br />Frauenanteil: 31.2%","Snowboarding (Winter, 2014)<br />Frauenanteil: 43.5%","Speed Skating (Winter, 2014)<br />Frauenanteil: 46.9%"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(0,114,178,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Winter","legendgroup":"Winter","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.5,0.5],"y":[0.40000000000000002,48.600000000000001],"text":"","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(102,102,102,1)","dash":"dash"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":20.649232046492322,"r":4.6492320464923216,"b":23.711083437110837,"l":99.958488999584915},"paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":9.2984640929846396},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.050000000000000003,1.05],"tickmode":"array","ticktext":["0%","25%","50%","75%","100%"],"tickvals":[0,0.25,0.5,0.75,1],"categoryorder":"array","categoryarray":["0%","25%","50%","75%","100%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":2.3246160232461599,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":7.4387712743877135},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.42265745877202915,"zeroline":false,"anchor":"y","title":{"text":"Frauenanteil (aktuellstes Jahr)","font":{"color":"rgba(0,0,0,1)","family":"","size":9.2984640929846396}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,48.600000000000001],"tickmode":"array","ticktext":["Boxing","Bobsleigh","Luge","Ski Jumping","Wrestling","Canoeing","Ice Hockey","Cycling","Equestrianism","Shooting","Judo","Rowing","Water Polo","Weightlifting","Skeleton","Alpine Skiing","Cross Country Skiing","Sailing","Football","Snowboarding","Tennis","Swimming","Speed Skating","Freestyle Skiing","Short Track Speed Skating","Athletics","Biathlon","Curling","Rugby Sevens","Figure Skating","Hockey","Basketball","Handball","Archery","Badminton","Beach Volleyball","Diving","Golf","Gymnastics","Modern Pentathlon","Table Tennis","Trampolining","Triathlon","Volleyball","Fencing","Taekwondo","Rhythmic Gymnastics","Synchronized Swimming"],"tickvals":[1,2,3,4,5,6,7,8,9,10,11,12,13,14.000000000000002,15,16,17,18,19,20,21,22,23,24,25,26,27.000000000000004,28,29,30.000000000000004,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48],"categoryorder":"array","categoryarray":["Boxing","Bobsleigh","Luge","Ski Jumping","Wrestling","Canoeing","Ice Hockey","Cycling","Equestrianism","Shooting","Judo","Rowing","Water Polo","Weightlifting","Skeleton","Alpine Skiing","Cross Country Skiing","Sailing","Football","Snowboarding","Tennis","Swimming","Speed Skating","Freestyle Skiing","Short Track Speed Skating","Athletics","Biathlon","Curling","Rugby Sevens","Figure Skating","Hockey","Basketball","Handball","Archery","Badminton","Beach Volleyball","Diving","Golf","Gymnastics","Modern Pentathlon","Table Tennis","Trampolining","Triathlon","Volleyball","Fencing","Taekwondo","Rhythmic Gymnastics","Synchronized Swimming"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":2.3246160232461608,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":7.4387712743877152},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.42265745877202915,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":9.2984640929846396}},"hoverformat":".2f"},"shapes":[],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":7.4387712743877135},"title":{"text":"Saison","font":{"color":"rgba(0,0,0,1)","family":"","size":9.2984640929846396}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"1ee44cd15c0a":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"},"1ee45a546a4a":{"xintercept":{}}},"cur_data":"1ee44cd15c0a","visdat":{"1ee44cd15c0a":["function (y) ","x"],"1ee45a546a4a":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div></div></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+<div id="nach-land" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-nach-land">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header dashboard-card-no-title bslib-navs-card-title">
+
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-13"><li class="nav-item" role="presentation"><a href="#card-tabset-13-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Sommerspiele 2016" aria-selected="true" class="nav-link active">Sommerspiele 2016</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-13-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Winterspiele 2014" aria-selected="false" class="nav-link">Winterspiele 2014</a></li></ul></div>
+
+
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-13"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-13-1"><div class="card-body html-fill-item html-fill-container" data-title="Sommerspiele 2016">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-9019fd6b7c24655c128b" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-9019fd6b7c24655c128b">{"x":{"visdat":{"1ee43dce73d0":["function () ","plotlyVisDat"]},"cur_data":"1ee43dce73d0","attrs":{"1ee43dce73d0":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"z":{},"color":{},"colors":"YlOrRd","zmin":0,"zmax":1,"locations":{},"text":{},"hoverinfo":"text","marker":{"line":{"color":"white","width":0.5}},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"mapType":"geo","scene":{"zaxis":{"title":"share"}},"geo":{"domain":{"x":[0,1],"y":[0,1]},"projection":{"type":"natural earth"}},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5},"title":"Sommerspiele 2016"},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"colorbar":{"title":"Frauenanteil","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top","tickformat":".0%"},"colorscale":[["0","rgba(255,255,204,1)"],["0.0416666666666667","rgba(255,249,189,1)"],["0.0833333333333333","rgba(255,243,175,1)"],["0.125","rgba(255,237,160,1)"],["0.166666666666667","rgba(255,230,146,1)"],["0.208333333333333","rgba(255,224,132,1)"],["0.25","rgba(254,217,118,1)"],["0.291666666666667","rgba(255,204,104,1)"],["0.333333333333333","rgba(255,191,90,1)"],["0.375","rgba(254,178,76,1)"],["0.416666666666667","rgba(254,166,71,1)"],["0.458333333333333","rgba(254,154,65,1)"],["0.5","rgba(253,141,60,1)"],["0.541666666666667","rgba(253,122,54,1)"],["0.583333333333333","rgba(253,102,48,1)"],["0.625","rgba(252,78,42,1)"],["0.666666666666667","rgba(244,64,37,1)"],["0.708333333333333","rgba(235,48,33,1)"],["0.75","rgba(227,26,28,1)"],["0.791666666666667","rgba(214,18,32,1)"],["0.833333333333333","rgba(202,9,35,1)"],["0.875","rgba(189,0,38,1)"],["0.916666666666667","rgba(168,0,38,1)"],["0.958333333333333","rgba(148,0,38,1)"],["1","rgba(128,0,38,1)"]],"showscale":true,"z":[0.33333333333333331,0.5,0.15625,0.5,0.69230769230769229,0.25,0.34883720930232559,0.22580645161290322,0.5714285714285714,0.25,0.50476190476190474,0.47887323943661969,0.25,0.41379310344827586,0.42857142857142855,0.36363636363636365,0.44444444444444442,0.32692307692307693,0.33333333333333331,0.5,1,0.36363636363636365,0.33333333333333331,0.55833333333333335,0.5,0.25,0.44805194805194803,0.39393939393939392,0.33333333333333331,0.43137254901960786,0.40000000000000002,0.5,0.66666666666666663,0.5903225806451613,0.40000000000000002,0.29999999999999999,0.5,0.40476190476190477,0.61479591836734693,0.58333333333333337,0.77272727272727271,0.5,0.55555555555555558,0.48951048951048953,0.5,0.59999999999999998,0.45454545454545453,0.22352941176470589,0.29059829059829062,0.40000000000000002,0.40384615384615385,0.34453781512605042,0.14285714285714285,0.5,0.30769230769230771,0.40540540540540543,0.30578512396694213,0.083333333333333329,0.375,0.46579804560260585,0.39130434782608697,0.54054054054054057,0.32075471698113206,0.51851851851851849,0.42602040816326531,0.59999999999999998,0.33333333333333331,0.25,0.44166666666666665,0.40000000000000002,0.25,0.46411483253588515,0.46153846153846156,0.39130434782608697,0.16666666666666666,0.2857142857142857,0.59999999999999998,0.40000000000000002,0.5,0.29999999999999999,0.59459459459459463,0.043478260869565216,0.42857142857142855,0.39285714285714285,0.45535714285714285,0.14285714285714285,0.34210526315789475,0.625,0.53191489361702127,0.2857142857142857,0.4563106796116505,0.75,0.5535714285714286,0.125,0.48955223880597015,0.45544554455445546,0.41772151898734178,0.36842105263157893,0.33333333333333331,0.50241545893719808,0.625,0.29999999999999999,0.40000000000000002,0.40625,0.14285714285714285,0.5,0.59999999999999998,0.125,0.55555555555555558,0.66666666666666663,0.28358208955223879,0.5,0.66666666666666663,0.39583333333333331,0.46875,0.40000000000000002,0.39130434782608697,0.5,0.35772357723577236,0.39534883720930231,0.59999999999999998,0.66666666666666663,0.33333333333333331,0.42857142857142855,0.51428571428571423,0.16666666666666666,0.54545454545454541,0.5,0.42857142857142855,0.59999999999999998,0.40000000000000002,0.55696202531645567,0.5714285714285714,0.3380281690140845,0.33333333333333331,0.532258064516129,0.49743589743589745,0.5,0.42857142857142855,0.59999999999999998,0.45454545454545453,0.41379310344827586,0.46153846153846156,0.33333333333333331,0.40000000000000002,0.25,0.40598290598290598,0.32222222222222224,0.64516129032258063,0.67500000000000004,0.054054054054054057,0.64210526315789473,0.31111111111111112,0.5,0.42857142857142855,0.375,0.72727272727272729,0.20000000000000001,0.64000000000000001,0.16666666666666666,0.5,0.38095238095238093,0.5,0.66666666666666663,0.5,0.43689320388349512,0.22222222222222221,0.33333333333333331,0.33333333333333331,0.33333333333333331,0.44117647058823528,0.33333333333333331,0.37254901960784315,0.57333333333333336,0.5,0.42857142857142855,0.2857142857142857,0.42857142857142855,0.51851851851851849,0.2857142857142857,0.55555555555555558,0.66666666666666663,0.59999999999999998,0.52727272727272723,0.35714285714285715,0.32786885245901637,0.46999999999999997,0.25,0.33333333333333331,0.57352941176470584,0.29411764705882354,0.5243243243243243,0.32857142857142857,0.28235294117647058,0.54545454545454541,0.5,0.33333333333333331,0.2857142857142857,0.69999999999999996],"zmin":0,"zmax":1,"locations":["AFG","ALB","DZA","AND","AGO","ATG","ARG","ARM","ABW","ASM","AUS","AUT","AZE","BHS","BGD","BRB","BDI","BEL","BEN","BMU","BTN","BIH","BLZ","BLR","BOL","BWA","BRA","BHR","BRN","BGR","BFA","CAF","KHM","CAN","CYM","COG","TCD","CHL","CHN","CIV","CMR","COD","COK","COL","COM","CPV","CRI","HRV","CUB","CYP","CZE","DNK","DJI","DMA","DOM","ECU","EGY","ERI","SLV","ESP","EST","ETH","FJI","FIN","FRA","FSM","GAB","GMB","GBR","GNB","GEO","DEU","GHA","GRC","GRD","GTM","GIN","GUM","GUY","HTI","HKG","HND","HUN","IDN","IND","IRN","IRL","ISL","ISR","VIR","ITA","VGB","JAM","JOR","JPN","KAZ","KEN","KGZ","KIR","KOR","XKX","SAU","LAO","LVA","LBY","LBR","LCA","LSO","LBN","LIE","LTU","LUX","MDG","MAR","MYS","MWI","MDA","MDV","MEX","MNG","MHL","MKD","MLI","MLT","MNE","MOZ","MUS","MRT","MMR","NAM","NIC","NLD","NPL","NGA","NER","NOR","NZL","OMN","PAK","PAN","PRY","PER","PHL","PSE","PLW","PNG","POL","PRT","PRK","PRI","QAT","ROU","ZAF","RUS","RWA","WSM","SEN","SYC","SGP","KNA","SLE","SVN","SMR","SLB","SOM","SRB","LKA","SSD","STP","SDN","CHE","SUR","SVK","SWE","SWZ","SYR","TZA","TON","THA","TJK","TKM","TLS","TGO","TWN","TTO","TUN","TUR","ARE","UGA","UKR","URY","USA","UZB","VEN","VNM","VCT","YEM","ZMB","ZWE"],"text":["AFG<br />Frauenanteil: 33.3%<br />Athlet:innen: 3","ALB<br />Frauenanteil: 50.0%<br />Athlet:innen: 6","ALG<br />Frauenanteil: 15.6%<br />Athlet:innen: 64","AND<br />Frauenanteil: 50.0%<br />Athlet:innen: 4","ANG<br />Frauenanteil: 69.2%<br />Athlet:innen: 26","ANT<br />Frauenanteil: 25.0%<br />Athlet:innen: 8","ARG<br />Frauenanteil: 34.9%<br />Athlet:innen: 215","ARM<br />Frauenanteil: 22.6%<br />Athlet:innen: 31","ARU<br />Frauenanteil: 57.1%<br />Athlet:innen: 7","ASA<br />Frauenanteil: 25.0%<br />Athlet:innen: 4","AUS<br />Frauenanteil: 50.5%<br />Athlet:innen: 420","AUT<br />Frauenanteil: 47.9%<br />Athlet:innen: 71","AZE<br />Frauenanteil: 25.0%<br />Athlet:innen: 56","BAH<br />Frauenanteil: 41.4%<br />Athlet:innen: 29","BAN<br />Frauenanteil: 42.9%<br />Athlet:innen: 7","BAR<br />Frauenanteil: 36.4%<br />Athlet:innen: 11","BDI<br />Frauenanteil: 44.4%<br />Athlet:innen: 9","BEL<br />Frauenanteil: 32.7%<br />Athlet:innen: 104","BEN<br />Frauenanteil: 33.3%<br />Athlet:innen: 6","BER<br />Frauenanteil: 50.0%<br />Athlet:innen: 8","BHU<br />Frauenanteil: 100.0%<br />Athlet:innen: 2","BIH<br />Frauenanteil: 36.4%<br />Athlet:innen: 11","BIZ<br />Frauenanteil: 33.3%<br />Athlet:innen: 3","BLR<br />Frauenanteil: 55.8%<br />Athlet:innen: 120","BOL<br />Frauenanteil: 50.0%<br />Athlet:innen: 12","BOT<br />Frauenanteil: 25.0%<br />Athlet:innen: 12","BRA<br />Frauenanteil: 44.8%<br />Athlet:innen: 462","BRN<br />Frauenanteil: 39.4%<br />Athlet:innen: 33","BRU<br />Frauenanteil: 33.3%<br />Athlet:innen: 3","BUL<br />Frauenanteil: 43.1%<br />Athlet:innen: 51","BUR<br />Frauenanteil: 40.0%<br />Athlet:innen: 5","CAF<br />Frauenanteil: 50.0%<br />Athlet:innen: 6","CAM<br />Frauenanteil: 66.7%<br />Athlet:innen: 6","CAN<br />Frauenanteil: 59.0%<br />Athlet:innen: 310","CAY<br />Frauenanteil: 40.0%<br />Athlet:innen: 5","CGO<br />Frauenanteil: 30.0%<br />Athlet:innen: 10","CHA<br />Frauenanteil: 50.0%<br />Athlet:innen: 2","CHI<br />Frauenanteil: 40.5%<br />Athlet:innen: 42","CHN<br />Frauenanteil: 61.5%<br />Athlet:innen: 392","CIV<br />Frauenanteil: 58.3%<br />Athlet:innen: 12","CMR<br />Frauenanteil: 77.3%<br />Athlet:innen: 22","COD<br />Frauenanteil: 50.0%<br />Athlet:innen: 4","COK<br />Frauenanteil: 55.6%<br />Athlet:innen: 9","COL<br />Frauenanteil: 49.0%<br />Athlet:innen: 143","COM<br />Frauenanteil: 50.0%<br />Athlet:innen: 4","CPV<br />Frauenanteil: 60.0%<br />Athlet:innen: 5","CRC<br />Frauenanteil: 45.5%<br />Athlet:innen: 11","CRO<br />Frauenanteil: 22.4%<br />Athlet:innen: 85","CUB<br />Frauenanteil: 29.1%<br />Athlet:innen: 117","CYP<br />Frauenanteil: 40.0%<br />Athlet:innen: 15","CZE<br />Frauenanteil: 40.4%<br />Athlet:innen: 104","DEN<br />Frauenanteil: 34.5%<br />Athlet:innen: 119","DJI<br />Frauenanteil: 14.3%<br />Athlet:innen: 7","DMA<br />Frauenanteil: 50.0%<br />Athlet:innen: 2","DOM<br />Frauenanteil: 30.8%<br />Athlet:innen: 26","ECU<br />Frauenanteil: 40.5%<br />Athlet:innen: 37","EGY<br />Frauenanteil: 30.6%<br />Athlet:innen: 121","ERI<br />Frauenanteil: 8.3%<br />Athlet:innen: 12","ESA<br />Frauenanteil: 37.5%<br />Athlet:innen: 8","ESP<br />Frauenanteil: 46.6%<br />Athlet:innen: 307","EST<br />Frauenanteil: 39.1%<br />Athlet:innen: 46","ETH<br />Frauenanteil: 54.1%<br />Athlet:innen: 37","FIJ<br />Frauenanteil: 32.1%<br />Athlet:innen: 53","FIN<br />Frauenanteil: 51.9%<br />Athlet:innen: 54","FRA<br />Frauenanteil: 42.6%<br />Athlet:innen: 392","FSM<br />Frauenanteil: 60.0%<br />Athlet:innen: 5","GAB<br />Frauenanteil: 33.3%<br />Athlet:innen: 6","GAM<br />Frauenanteil: 25.0%<br />Athlet:innen: 4","GBR<br />Frauenanteil: 44.2%<br />Athlet:innen: 360","GBS<br />Frauenanteil: 40.0%<br />Athlet:innen: 5","GEO<br />Frauenanteil: 25.0%<br />Athlet:innen: 40","GER<br />Frauenanteil: 46.4%<br />Athlet:innen: 418","GHA<br />Frauenanteil: 46.2%<br />Athlet:innen: 13","GRE<br />Frauenanteil: 39.1%<br />Athlet:innen: 92","GRN<br />Frauenanteil: 16.7%<br />Athlet:innen: 6","GUA<br />Frauenanteil: 28.6%<br />Athlet:innen: 21","GUI<br />Frauenanteil: 60.0%<br />Athlet:innen: 5","GUM<br />Frauenanteil: 40.0%<br />Athlet:innen: 5","GUY<br />Frauenanteil: 50.0%<br />Athlet:innen: 6","HAI<br />Frauenanteil: 30.0%<br />Athlet:innen: 10","HKG<br />Frauenanteil: 59.5%<br />Athlet:innen: 37","HON<br />Frauenanteil: 4.3%<br />Athlet:innen: 23","HUN<br />Frauenanteil: 42.9%<br />Athlet:innen: 154","INA<br />Frauenanteil: 39.3%<br />Athlet:innen: 28","IND<br />Frauenanteil: 45.5%<br />Athlet:innen: 112","IRI<br />Frauenanteil: 14.3%<br />Athlet:innen: 63","IRL<br />Frauenanteil: 34.2%<br />Athlet:innen: 76","ISL<br />Frauenanteil: 62.5%<br />Athlet:innen: 8","ISR<br />Frauenanteil: 53.2%<br />Athlet:innen: 47","ISV<br />Frauenanteil: 28.6%<br />Athlet:innen: 7","ITA<br />Frauenanteil: 45.6%<br />Athlet:innen: 309","IVB<br />Frauenanteil: 75.0%<br />Athlet:innen: 4","JAM<br />Frauenanteil: 55.4%<br />Athlet:innen: 56","JOR<br />Frauenanteil: 12.5%<br />Athlet:innen: 8","JPN<br />Frauenanteil: 49.0%<br />Athlet:innen: 335","KAZ<br />Frauenanteil: 45.5%<br />Athlet:innen: 101","KEN<br />Frauenanteil: 41.8%<br />Athlet:innen: 79","KGZ<br />Frauenanteil: 36.8%<br />Athlet:innen: 19","KIR<br />Frauenanteil: 33.3%<br />Athlet:innen: 3","KOR<br />Frauenanteil: 50.2%<br />Athlet:innen: 207","KOS<br />Frauenanteil: 62.5%<br />Athlet:innen: 8","KSA<br />Frauenanteil: 30.0%<br />Athlet:innen: 10","LAO<br />Frauenanteil: 40.0%<br />Athlet:innen: 5","LAT<br />Frauenanteil: 40.6%<br />Athlet:innen: 32","LBA<br />Frauenanteil: 14.3%<br />Athlet:innen: 7","LBR<br />Frauenanteil: 50.0%<br />Athlet:innen: 2","LCA<br />Frauenanteil: 60.0%<br />Athlet:innen: 5","LES<br />Frauenanteil: 12.5%<br />Athlet:innen: 8","LIB<br />Frauenanteil: 55.6%<br />Athlet:innen: 9","LIE<br />Frauenanteil: 66.7%<br />Athlet:innen: 3","LTU<br />Frauenanteil: 28.4%<br />Athlet:innen: 67","LUX<br />Frauenanteil: 50.0%<br />Athlet:innen: 10","MAD<br />Frauenanteil: 66.7%<br />Athlet:innen: 6","MAR<br />Frauenanteil: 39.6%<br />Athlet:innen: 48","MAS<br />Frauenanteil: 46.9%<br />Athlet:innen: 32","MAW<br />Frauenanteil: 40.0%<br />Athlet:innen: 5","MDA<br />Frauenanteil: 39.1%<br />Athlet:innen: 23","MDV<br />Frauenanteil: 50.0%<br />Athlet:innen: 4","MEX<br />Frauenanteil: 35.8%<br />Athlet:innen: 123","MGL<br />Frauenanteil: 39.5%<br />Athlet:innen: 43","MHL<br />Frauenanteil: 60.0%<br />Athlet:innen: 5","MKD<br />Frauenanteil: 66.7%<br />Athlet:innen: 6","MLI<br />Frauenanteil: 33.3%<br />Athlet:innen: 6","MLT<br />Frauenanteil: 42.9%<br />Athlet:innen: 7","MNE<br />Frauenanteil: 51.4%<br />Athlet:innen: 35","MOZ<br />Frauenanteil: 16.7%<br />Athlet:innen: 6","MRI<br />Frauenanteil: 54.5%<br />Athlet:innen: 11","MTN<br />Frauenanteil: 50.0%<br />Athlet:innen: 2","MYA<br />Frauenanteil: 42.9%<br />Athlet:innen: 7","NAM<br />Frauenanteil: 60.0%<br />Athlet:innen: 10","NCA<br />Frauenanteil: 40.0%<br />Athlet:innen: 5","NED<br />Frauenanteil: 55.7%<br />Athlet:innen: 237","NEP<br />Frauenanteil: 57.1%<br />Athlet:innen: 7","NGR<br />Frauenanteil: 33.8%<br />Athlet:innen: 71","NIG<br />Frauenanteil: 33.3%<br />Athlet:innen: 6","NOR<br />Frauenanteil: 53.2%<br />Athlet:innen: 62","NZL<br />Frauenanteil: 49.7%<br />Athlet:innen: 195","OMA<br />Frauenanteil: 50.0%<br />Athlet:innen: 4","PAK<br />Frauenanteil: 42.9%<br />Athlet:innen: 7","PAN<br />Frauenanteil: 60.0%<br />Athlet:innen: 10","PAR<br />Frauenanteil: 45.5%<br />Athlet:innen: 11","PER<br />Frauenanteil: 41.4%<br />Athlet:innen: 29","PHI<br />Frauenanteil: 46.2%<br />Athlet:innen: 13","PLE<br />Frauenanteil: 33.3%<br />Athlet:innen: 6","PLW<br />Frauenanteil: 40.0%<br />Athlet:innen: 5","PNG<br />Frauenanteil: 25.0%<br />Athlet:innen: 8","POL<br />Frauenanteil: 40.6%<br />Athlet:innen: 234","POR<br />Frauenanteil: 32.2%<br />Athlet:innen: 90","PRK<br />Frauenanteil: 64.5%<br />Athlet:innen: 31","PUR<br />Frauenanteil: 67.5%<br />Athlet:innen: 40","QAT<br />Frauenanteil: 5.4%<br />Athlet:innen: 37","ROU<br />Frauenanteil: 64.2%<br />Athlet:innen: 95","RSA<br />Frauenanteil: 31.1%<br />Athlet:innen: 135","RUS<br />Frauenanteil: 50.0%<br />Athlet:innen: 284","RWA<br />Frauenanteil: 42.9%<br />Athlet:innen: 7","SAM<br />Frauenanteil: 37.5%<br />Athlet:innen: 8","SEN<br />Frauenanteil: 72.7%<br />Athlet:innen: 22","SEY<br />Frauenanteil: 20.0%<br />Athlet:innen: 10","SGP<br />Frauenanteil: 64.0%<br />Athlet:innen: 25","SKN<br />Frauenanteil: 16.7%<br />Athlet:innen: 6","SLE<br />Frauenanteil: 50.0%<br />Athlet:innen: 4","SLO<br />Frauenanteil: 38.1%<br />Athlet:innen: 63","SMR<br />Frauenanteil: 50.0%<br />Athlet:innen: 4","SOL<br />Frauenanteil: 66.7%<br />Athlet:innen: 3","SOM<br />Frauenanteil: 50.0%<br />Athlet:innen: 2","SRB<br />Frauenanteil: 43.7%<br />Athlet:innen: 103","SRI<br />Frauenanteil: 22.2%<br />Athlet:innen: 9","SSD<br />Frauenanteil: 33.3%<br />Athlet:innen: 3","STP<br />Frauenanteil: 33.3%<br />Athlet:innen: 3","SUD<br />Frauenanteil: 33.3%<br />Athlet:innen: 6","SUI<br />Frauenanteil: 44.1%<br />Athlet:innen: 102","SUR<br />Frauenanteil: 33.3%<br />Athlet:innen: 6","SVK<br />Frauenanteil: 37.3%<br />Athlet:innen: 51","SWE<br />Frauenanteil: 57.3%<br />Athlet:innen: 150","SWZ<br />Frauenanteil: 50.0%<br />Athlet:innen: 2","SYR<br />Frauenanteil: 42.9%<br />Athlet:innen: 7","TAN<br />Frauenanteil: 28.6%<br />Athlet:innen: 7","TGA<br />Frauenanteil: 42.9%<br />Athlet:innen: 7","THA<br />Frauenanteil: 51.9%<br />Athlet:innen: 54","TJK<br />Frauenanteil: 28.6%<br />Athlet:innen: 7","TKM<br />Frauenanteil: 55.6%<br />Athlet:innen: 9","TLS<br />Frauenanteil: 66.7%<br />Athlet:innen: 3","TOG<br />Frauenanteil: 60.0%<br />Athlet:innen: 5","TPE<br />Frauenanteil: 52.7%<br />Athlet:innen: 55","TTO<br />Frauenanteil: 35.7%<br />Athlet:innen: 28","TUN<br />Frauenanteil: 32.8%<br />Athlet:innen: 61","TUR<br />Frauenanteil: 47.0%<br />Athlet:innen: 100","UAE<br />Frauenanteil: 25.0%<br />Athlet:innen: 12","UGA<br />Frauenanteil: 33.3%<br />Athlet:innen: 21","UKR<br />Frauenanteil: 57.4%<br />Athlet:innen: 204","URU<br />Frauenanteil: 29.4%<br />Athlet:innen: 17","USA<br />Frauenanteil: 52.4%<br />Athlet:innen: 555","UZB<br />Frauenanteil: 32.9%<br />Athlet:innen: 70","VEN<br />Frauenanteil: 28.2%<br />Athlet:innen: 85","VIE<br />Frauenanteil: 54.5%<br />Athlet:innen: 22","VIN<br />Frauenanteil: 50.0%<br />Athlet:innen: 4","YEM<br />Frauenanteil: 33.3%<br />Athlet:innen: 3","ZAM<br />Frauenanteil: 28.6%<br />Athlet:innen: 7","ZIM<br />Frauenanteil: 70.0%<br />Athlet:innen: 30"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":0.043478260869565216,"cmax":1,"colorscale":[["0","rgba(255,255,204,1)"],["0.0416666666666667","rgba(255,249,189,1)"],["0.0833333333333333","rgba(255,243,175,1)"],["0.125","rgba(255,237,160,1)"],["0.166666666666667","rgba(255,230,146,1)"],["0.208333333333333","rgba(255,224,132,1)"],["0.25","rgba(254,217,118,1)"],["0.291666666666667","rgba(255,204,104,1)"],["0.333333333333333","rgba(255,191,90,1)"],["0.375","rgba(254,178,76,1)"],["0.416666666666667","rgba(254,166,71,1)"],["0.458333333333333","rgba(254,154,65,1)"],["0.5","rgba(253,141,60,1)"],["0.541666666666667","rgba(253,122,54,1)"],["0.583333333333333","rgba(253,102,48,1)"],["0.625","rgba(252,78,42,1)"],["0.666666666666667","rgba(244,64,37,1)"],["0.708333333333333","rgba(235,48,33,1)"],["0.75","rgba(227,26,28,1)"],["0.791666666666667","rgba(214,18,32,1)"],["0.833333333333333","rgba(202,9,35,1)"],["0.875","rgba(189,0,38,1)"],["0.916666666666667","rgba(168,0,38,1)"],["0.958333333333333","rgba(148,0,38,1)"],["1","rgba(128,0,38,1)"]],"showscale":false,"color":"white","width":0.5}},"type":"choropleth","geo":"geo","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-13-2"><div class="card-body html-fill-item html-fill-container" data-title="Winterspiele 2014">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-735673632dfd72887d04" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-735673632dfd72887d04">{"x":{"visdat":{"1ee4291a4c0e":["function () ","plotlyVisDat"]},"cur_data":"1ee4291a4c0e","attrs":{"1ee4291a4c0e":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"z":{},"color":{},"colors":"YlOrRd","zmin":0,"zmax":1,"locations":{},"text":{},"hoverinfo":"text","marker":{"line":{"color":"white","width":0.5}},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"mapType":"geo","scene":{"zaxis":{"title":"share"}},"geo":{"domain":{"x":[0,1],"y":[0,1]},"projection":{"type":"natural earth"}},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5},"title":"Winterspiele 2014"},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"colorbar":{"title":"Frauenanteil","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top","tickformat":".0%"},"colorscale":[["0","rgba(255,255,204,1)"],["0.0416666666666667","rgba(255,249,189,1)"],["0.0833333333333334","rgba(255,243,175,1)"],["0.125","rgba(255,237,160,1)"],["0.166666666666667","rgba(255,230,146,1)"],["0.208333333333333","rgba(255,224,132,1)"],["0.25","rgba(254,217,118,1)"],["0.291666666666667","rgba(255,204,104,1)"],["0.333333333333333","rgba(255,191,90,1)"],["0.375","rgba(254,178,76,1)"],["0.416666666666667","rgba(254,166,71,1)"],["0.458333333333333","rgba(254,154,65,1)"],["0.5","rgba(253,141,60,1)"],["0.541666666666667","rgba(253,122,54,1)"],["0.583333333333333","rgba(253,102,48,1)"],["0.625","rgba(252,78,42,1)"],["0.666666666666667","rgba(244,64,37,1)"],["0.708333333333333","rgba(235,48,33,1)"],["0.75","rgba(227,26,28,1)"],["0.791666666666667","rgba(214,18,32,1)"],["0.833333333333333","rgba(202,9,35,1)"],["0.875","rgba(189,0,38,1)"],["0.916666666666667","rgba(168,0,38,1)"],["0.958333333333333","rgba(148,0,38,1)"],["1","rgba(128,0,38,1)"]],"showscale":true,"z":[1,0.33333333333333331,0.42857142857142855,0.25,0.51666666666666672,0.31746031746031744,0.33333333333333331,0.5714285714285714,0.40000000000000002,0.42307692307692307,0.53846153846153844,0.27777777777777779,0.44239631336405533,0.5,0.58064516129032262,0.36363636363636365,0.27586206896551724,0.40000000000000002,0.29999999999999999,0.28000000000000003,0.33333333333333331,0.3644859813084112,0.39622641509433965,0.5,0.49668874172185429,0.2857142857142857,0.5625,0.40000000000000002,0.20000000000000001,0.40000000000000002,0.25,1,0.39090909090909093,0.55963302752293576,0.32000000000000001,0.42253521126760563,0.125,0.5,0.33333333333333331,0.55555555555555558,0.5,0.25,0.5,0.33333333333333331,1,0.5,0.20000000000000001,0.48717948717948717,0.29090909090909089,0.5714285714285714,1,0.33333333333333331,0.39655172413793105,0.5,0.31818181818181818,0.41314553990610331,0.25862068965517243,0.5,0.375,0.43421052631578949,0.27419354838709675,0.43434343434343436,0.5,1,0.5,0.54761904761904767,0.45045045045045046,0.33333333333333331],"zmin":0,"zmax":1,"locations":["ALB","AND","ARG","ARM","AUS","AUT","AZE","BEL","BIH","BLR","BRA","BGR","CAN","CHL","CHN","HRV","CZE","DNK","ESP","EST","FIN","FRA","GBR","GEO","DEU","GRC","HUN","IRN","IRL","ISL","ISR","VIR","ITA","JPN","KAZ","KOR","LVA","LBN","LIE","LTU","MAR","MDA","MNG","MKD","MLT","MNE","MCO","NLD","NOR","NZL","PRY","PER","POL","PRT","ROU","RUS","SVN","SMR","SRB","CHE","SVK","SWE","THA","TGO","TUR","UKR","USA","UZB"],"text":["ALB<br />Frauenanteil: 100.0%<br />Athlet:innen: 1","AND<br />Frauenanteil: 33.3%<br />Athlet:innen: 6","ARG<br />Frauenanteil: 42.9%<br />Athlet:innen: 7","ARM<br />Frauenanteil: 25.0%<br />Athlet:innen: 4","AUS<br />Frauenanteil: 51.7%<br />Athlet:innen: 60","AUT<br />Frauenanteil: 31.7%<br />Athlet:innen: 126","AZE<br />Frauenanteil: 33.3%<br />Athlet:innen: 3","BEL<br />Frauenanteil: 57.1%<br />Athlet:innen: 7","BIH<br />Frauenanteil: 40.0%<br />Athlet:innen: 5","BLR<br />Frauenanteil: 42.3%<br />Athlet:innen: 26","BRA<br />Frauenanteil: 53.8%<br />Athlet:innen: 13","BUL<br />Frauenanteil: 27.8%<br />Athlet:innen: 18","CAN<br />Frauenanteil: 44.2%<br />Athlet:innen: 217","CHI<br />Frauenanteil: 50.0%<br />Athlet:innen: 6","CHN<br />Frauenanteil: 58.1%<br />Athlet:innen: 62","CRO<br />Frauenanteil: 36.4%<br />Athlet:innen: 11","CZE<br />Frauenanteil: 27.6%<br />Athlet:innen: 87","DEN<br />Frauenanteil: 40.0%<br />Athlet:innen: 10","ESP<br />Frauenanteil: 30.0%<br />Athlet:innen: 20","EST<br />Frauenanteil: 28.0%<br />Athlet:innen: 25","FIN<br />Frauenanteil: 33.3%<br />Athlet:innen: 99","FRA<br />Frauenanteil: 36.4%<br />Athlet:innen: 107","GBR<br />Frauenanteil: 39.6%<br />Athlet:innen: 53","GEO<br />Frauenanteil: 50.0%<br />Athlet:innen: 4","GER<br />Frauenanteil: 49.7%<br />Athlet:innen: 151","GRE<br />Frauenanteil: 28.6%<br />Athlet:innen: 7","HUN<br />Frauenanteil: 56.2%<br />Athlet:innen: 16","IRI<br />Frauenanteil: 40.0%<br />Athlet:innen: 5","IRL<br />Frauenanteil: 20.0%<br />Athlet:innen: 5","ISL<br />Frauenanteil: 40.0%<br />Athlet:innen: 5","ISR<br />Frauenanteil: 25.0%<br />Athlet:innen: 4","ISV<br />Frauenanteil: 100.0%<br />Athlet:innen: 1","ITA<br />Frauenanteil: 39.1%<br />Athlet:innen: 110","JPN<br />Frauenanteil: 56.0%<br />Athlet:innen: 109","KAZ<br />Frauenanteil: 32.0%<br />Athlet:innen: 50","KOR<br />Frauenanteil: 42.3%<br />Athlet:innen: 71","LAT<br />Frauenanteil: 12.5%<br />Athlet:innen: 56","LIB<br />Frauenanteil: 50.0%<br />Athlet:innen: 2","LIE<br />Frauenanteil: 33.3%<br />Athlet:innen: 3","LTU<br />Frauenanteil: 55.6%<br />Athlet:innen: 9","MAR<br />Frauenanteil: 50.0%<br />Athlet:innen: 2","MDA<br />Frauenanteil: 25.0%<br />Athlet:innen: 4","MGL<br />Frauenanteil: 50.0%<br />Athlet:innen: 2","MKD<br />Frauenanteil: 33.3%<br />Athlet:innen: 3","MLT<br />Frauenanteil: 100.0%<br />Athlet:innen: 1","MNE<br />Frauenanteil: 50.0%<br />Athlet:innen: 2","MON<br />Frauenanteil: 20.0%<br />Athlet:innen: 5","NED<br />Frauenanteil: 48.7%<br />Athlet:innen: 39","NOR<br />Frauenanteil: 29.1%<br />Athlet:innen: 110","NZL<br />Frauenanteil: 57.1%<br />Athlet:innen: 14","PAR<br />Frauenanteil: 100.0%<br />Athlet:innen: 1","PER<br />Frauenanteil: 33.3%<br />Athlet:innen: 3","POL<br />Frauenanteil: 39.7%<br />Athlet:innen: 58","POR<br />Frauenanteil: 50.0%<br />Athlet:innen: 2","ROU<br />Frauenanteil: 31.8%<br />Athlet:innen: 22","RUS<br />Frauenanteil: 41.3%<br />Athlet:innen: 213","SLO<br />Frauenanteil: 25.9%<br />Athlet:innen: 58","SMR<br />Frauenanteil: 50.0%<br />Athlet:innen: 2","SRB<br />Frauenanteil: 37.5%<br />Athlet:innen: 8","SUI<br />Frauenanteil: 43.4%<br />Athlet:innen: 152","SVK<br />Frauenanteil: 27.4%<br />Athlet:innen: 62","SWE<br />Frauenanteil: 43.4%<br />Athlet:innen: 99","THA<br />Frauenanteil: 50.0%<br />Athlet:innen: 2","TOG<br />Frauenanteil: 100.0%<br />Athlet:innen: 2","TUR<br />Frauenanteil: 50.0%<br />Athlet:innen: 6","UKR<br />Frauenanteil: 54.8%<br />Athlet:innen: 42","USA<br />Frauenanteil: 45.0%<br />Athlet:innen: 222","UZB<br />Frauenanteil: 33.3%<br />Athlet:innen: 3"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":0.125,"cmax":1,"colorscale":[["0","rgba(255,255,204,1)"],["0.0416666666666667","rgba(255,249,189,1)"],["0.0833333333333334","rgba(255,243,175,1)"],["0.125","rgba(255,237,160,1)"],["0.166666666666667","rgba(255,230,146,1)"],["0.208333333333333","rgba(255,224,132,1)"],["0.25","rgba(254,217,118,1)"],["0.291666666666667","rgba(255,204,104,1)"],["0.333333333333333","rgba(255,191,90,1)"],["0.375","rgba(254,178,76,1)"],["0.416666666666667","rgba(254,166,71,1)"],["0.458333333333333","rgba(254,154,65,1)"],["0.5","rgba(253,141,60,1)"],["0.541666666666667","rgba(253,122,54,1)"],["0.583333333333333","rgba(253,102,48,1)"],["0.625","rgba(252,78,42,1)"],["0.666666666666667","rgba(244,64,37,1)"],["0.708333333333333","rgba(235,48,33,1)"],["0.75","rgba(227,26,28,1)"],["0.791666666666667","rgba(214,18,32,1)"],["0.833333333333333","rgba(202,9,35,1)"],["0.875","rgba(189,0,38,1)"],["0.916666666666667","rgba(168,0,38,1)"],["0.958333333333333","rgba(148,0,38,1)"],["1","rgba(128,0,38,1)"]],"showscale":false,"color":"white","width":0.5}},"type":"choropleth","geo":"geo","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
+
+</div>
+</div>
+</div></div></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div>
+
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /container fluid -->
+
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (_event) {
+  if (window.bslib.Card) {
+    window.bslib.Card.initializeAllCards();
+  }
+}); 
+</script>
+  
+
+
+
+</body></html>

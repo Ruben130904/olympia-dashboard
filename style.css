@@ -1,0 +1,26 @@
+/* styles.css – Anpassung aller Value Boxes im Quarto Dashboard */
+
+/* Wert (die große Zahl/Kennzahl) in der Value Box verkleinern */
+.quarto-dashboard .bslib-value-box .value-box-value {
+    font-size: clamp(0.8rem, 6cqw, 1.8rem) !important;
+    font-weight: 600 !important;
+    line-height: 1.1 !important;
+}
+
+/* Titel (Beschriftung über dem Wert) verkleinern */
+.quarto-dashboard .bslib-value-box .value-box-title {
+    font-size: clamp(0.65rem, 3cqw, 0.95rem) !important;
+    font-weight: 500 !important;
+    text-transform: none !important;
+    opacity: 0.85;
+}
+
+/* Optional: Icon in der Value Box ebenfalls verkleinern */
+.quarto-dashboard .bslib-value-box .value-box-showcase {
+    font-size: 1.4rem !important;
+}
+
+/* Optional: Innenabstand (Padding) reduzieren, damit die Box insgesamt kompakter wirkt */
+.quarto-dashboard .bslib-value-box .value-box-area {
+    padding: 0.5rem 0.75rem !important;
+}
