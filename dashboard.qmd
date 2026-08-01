@@ -126,9 +126,9 @@ ggplotly(p)
 ### Nach Sportart über Zeit
 
 ```{r}
-p2 <- ggplot(gender_by_sport, aes(x = Year, y = share, group = Sport, text = Sport, color = Sport)) +
+p2 <- ggplot(gender_by_sport_mixed, aes(x = Year, y = share, group = Sport, text = Sport, color = Sport)) +
   geom_line(alpha = 0.3, linewidth = 0.5) +
-  scale_y_continuous(labels = scales::percent, limits = c(0, 1)) +
+  scale_y_continuous(labels = scales::percent, limits = c(0, NA)) +
   labs(
     x = "Jahr",
     y = "Frauenanteil",
@@ -138,6 +138,9 @@ p2 <- ggplot(gender_by_sport, aes(x = Year, y = share, group = Sport, text = Spo
 
 ggplotly(p2, tooltip = "text")
 ```
+
+**Hinweis:** Reine Frauensportarten (z.B. Synchronschwimmen, Rhythmische Sportgymnastik) sowie reine Männersportarten sind hier nicht dargestellt, da ihr Anteil konstant bei 100 % bzw. 0 % liegt und keine Entwicklung zeigt.
+
 
 ### Aktueller Vergleich
 

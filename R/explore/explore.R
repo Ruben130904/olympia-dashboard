@@ -48,3 +48,7 @@ p2 <- ggplot(gender_by_sport, aes(x = Year, y = share, group = Sport, text = Spo
 ggplotly(p2, tooltip = "text")
 
 p2
+
+Sync <- gender_by_sport |> 
+  filter(Sport == "Synchronized Swimming")
+Sync

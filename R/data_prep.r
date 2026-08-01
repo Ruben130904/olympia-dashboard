@@ -101,6 +101,17 @@ gender_by_sport <- athlete_events |>
   ungroup() |> 
   filter(Sex == "F")
 
+# Sportarten identifizieren, die durchgehend nur ein Geschlecht haben
+single_sex_sports <- gender_by_sport |> 
+  group_by(Sport) |> 
+  summarise(min_share = min(share), max_share = max(share)) |> 
+  filter(min_share == max_share & min_share %in% c(0, 1)) |> 
+  pull(Sport)
+
+# Für den Zeitreihen-Chart: nur Sportarten mit tatsächlicher Entwicklung
+gender_by_sport_mixed <- gender_by_sport |> 
+  filter(!Sport %in% single_sex_sports)
+
 
 
 
