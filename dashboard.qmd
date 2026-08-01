@@ -8,13 +8,13 @@ format:
 ---
 
 ```{r}
-#| include: false
-
-library(tidyverse)
+#| include: false  
 library(scales)
-athlete_events <- read_csv("Data/Raw/athlete_events.csv")
+library(plotly)
+library(knitr)
+library(markdown)
 
-source("R/data_prep.r")
+source("R/data_prep.R")
 ```
 
 # Startseite
@@ -99,13 +99,6 @@ list(
 
 ## Row {height=60%}
 
-```{r}
-#| include: false
-library(ggplot2)
-library(plotly)
-library(knitr)
-library(markdown)
-```
 
 ### Column
 ```{r}

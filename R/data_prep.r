@@ -5,7 +5,7 @@ library(tidyverse)
 
 # Data 
 athlete_events <- read_csv("Data/Raw/athlete_events.csv")
-regions <- read_csv("Data/Raw/noc_regions.csv")
+regions <- read_csv("Data/Raw/noc_regions.csv") # Nutzung ab Seite 3
 
 # Hilfsfunktionen
 fmt_n   <- function(x) scales::comma(x)
