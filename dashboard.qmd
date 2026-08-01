@@ -125,6 +125,8 @@ ggplotly(p)
 
 ### Nach Sportart über Zeit
 
+#### Column {width="82%"}
+
 ```{r}
 p2 <- ggplot(gender_by_sport_mixed, aes(x = Year, y = share, group = Sport, text = Sport, color = Sport)) +
   geom_line(alpha = 0.3, linewidth = 0.5) +
@@ -136,9 +138,11 @@ p2 <- ggplot(gender_by_sport_mixed, aes(x = Year, y = share, group = Sport, text
   ) +
   theme_minimal(base_size = 13)
 
-ggplotly(p2, tooltip = "text")
+ggplotly(p2, tooltip = "text") |> 
+  layout(showlegend = FALSE)
 ```
 
+#### Column {width="18%"}
 **Hinweis:** Reine Frauensportarten (z.B. Synchronschwimmen, Rhythmische Sportgymnastik) sowie reine Männersportarten sind hier nicht dargestellt, da ihr Anteil konstant bei 100 % bzw. 0 % liegt und keine Entwicklung zeigt.
 
 
@@ -180,3 +184,52 @@ p3 <- gender_by_sport_current |>
 
 ggplotly(p3, tooltip = "text")
 ```
+
+# Nach Land
+
+
+```{r}
+#| include: false
+
+make_gender_map <- function(data, title_suffix) {
+  map_data <- data |> 
+    filter(!is.na(iso3)) |> 
+    mutate(tooltip_text = paste0(
+      NOC, "\n",
+      "Frauenanteil: ", scales::percent(share, accuracy = 0.1), "\n",
+      "Athlet:innen: ", total
+    ))
+
+  plot_geo(map_data) |> 
+    add_trace(
+      z = ~share,
+      color = ~share,
+      colors = "YlOrRd",
+      zmin = 0, zmax = 1,
+      locations = ~iso3,
+      text = ~tooltip_text,
+      hoverinfo = "text",
+      marker = list(line = list(color = "white", width = 0.5))
+    ) |> 
+    colorbar(title = "Frauenanteil", tickformat = ".0%") |> 
+    layout(
+      title = title_suffix,
+      geo = list(projection = list(type = "natural earth"))
+    )
+}
+```
+
+## Row {.tabset}
+
+### Sommerspiele 2016
+
+```{r}
+make_gender_map(gender_by_country_summer, "Sommerspiele 2016")
+```
+### Winterspiele 2014
+
+```{r}
+make_gender_map(gender_by_country_winter, "Winterspiele 2014")
+```
+
+

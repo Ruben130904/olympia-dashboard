@@ -2,6 +2,8 @@
 
 # Libs
 library(tidyverse)
+library(countrycode)
+
 
 # Data 
 athlete_events <- read_csv("Data/Raw/athlete_events.csv")
@@ -138,3 +140,28 @@ current_sports <- athlete_events |>
 # Bestehende Tabelle darauf einschränken
 gender_by_sport_current <- gender_by_sport_current |> 
   filter(Sport %in% current_sports)
+
+
+# Gender nach Land
+
+get_gender_by_country <- function(season, year) {
+  athlete_events |> 
+    filter(Year == year, Season == season) |> 
+    distinct(ID, NOC, Sex) |> 
+    count(NOC, Sex, name = "n") |> 
+    group_by(NOC) |> 
+    mutate(total = sum(n), share = n / total) |> 
+    ungroup() |> 
+    filter(Sex == "F") |> 
+    mutate(iso3 = countrycode(
+      NOC,
+      origin = "ioc",
+      destination = "iso3c",
+      custom_match = c("KOS" = "XKX", "LIB" = "LBN")
+    ))
+}
+
+gender_by_country_summer <- get_gender_by_country("Summer", 2016)
+gender_by_country_winter <- get_gender_by_country("Winter", 2014)
+
+
