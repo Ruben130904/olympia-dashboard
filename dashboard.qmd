@@ -17,6 +17,23 @@ library(markdown)
 source("R/data_prep.R")
 ```
 
+# Über die Daten
+
+## Row
+
+Der verwendete Datensatz **"120 years of Olympic history"** stammt von Kaggle
+und enthält rund 271.000 Zeilen zu Athlet:innen und ihren Teilnahmen bei
+Olympischen Spielen von 1896 bis 2016.
+
+**Genutzte Variablen:** NOC (Länderkürzel), Sex, Year, Season, Sport, Medal
+
+**Einschränkungen:**
+
+- Fehlende Werte bei Alter, Größe und Gewicht, besonders in frühen Jahren
+- Die Kategorie "Medal" erfasst nur die drei Erstplatzierten je Event
+
+**Quelle:** [Kaggle – 120 years of Olympic history](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results)
+
 # Frauenanteil 
 
 ## Row {height=40% .tabset}
@@ -107,7 +124,8 @@ p <- ggplot(gender_by_year_female, aes(x = Year, y = share, color = Season)) +
   geom_line(linewidth = 1) +
   geom_point(size = 1.5) +
   scale_y_continuous(labels = scales::percent, limits = c(0, NA)) +
-  scale_color_manual(values = c("Summer" = col_summer, "Winter" = col_winter)) +
+  scale_color_manual(
+    values = c("Summer" = col_summer, "Winter" = col_winter)) +
   labs(
     x = "Jahr",
     y = "Anteil weiblicher Athlet:innen",
