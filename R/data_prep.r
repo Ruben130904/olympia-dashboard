@@ -9,6 +9,10 @@ library(countrycode)
 athlete_events <- read_csv("Data/Raw/athlete_events.csv")
 regions <- read_csv("Data/Raw/noc_regions.csv") # Nutzung ab Seite 3
 
+# Daten vorbereiten
+athlete_events <- athlete_events |> 
+  mutate(Season = recode(Season, "Summer" = "Sommer", "Winter" = "Winter"))
+
 # Hilfsfunktionen
 fmt_n   <- function(x) scales::comma(x)
 fmt_pct <- function(x) scales::percent(x, accuracy = 0.1)
@@ -79,7 +83,7 @@ get_valuebox_stats <- function(season) {
   )
 }
 
-stats_summer <- get_valuebox_stats("Summer")
+stats_summer <- get_valuebox_stats("Sommer")
 stats_winter <- get_valuebox_stats("Winter")
 
 
@@ -131,7 +135,7 @@ gender_by_sport_current <- athlete_events |>
 # Sportarten, die aktuell noch olympisch sind
 current_sports <- athlete_events |> 
   filter(
-    (Season == "Summer" & Year == 2016) |
+    (Season == "Sommer" & Year == 2016) |
     (Season == "Winter" & Year == 2014)
   ) |> 
   distinct(Sport) |> 
@@ -161,7 +165,7 @@ get_gender_by_country <- function(season, year) {
     ))
 }
 
-gender_by_country_summer <- get_gender_by_country("Summer", 2016)
+gender_by_country_summer <- get_gender_by_country("Sommer", 2016)
 gender_by_country_winter <- get_gender_by_country("Winter", 2014)
 
 
