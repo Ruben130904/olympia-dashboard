@@ -228,7 +228,7 @@ Olympischen Spielen von 1896 bis 2016.
 **Einschränkungen:**
 
 - Fehlende Werte bei Alter, Größe und Gewicht, besonders in frühen Jahren
-- Die Kategorie "Medal" erfasst nur die drei Erstplatzierten je Event
+- Fehlende Werte der Jahre 2018 und 2020, da der Datensatz nur bis 2016 reicht
 
 **Quelle:** [Kaggle – 120 years of Olympic history](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results)
 
