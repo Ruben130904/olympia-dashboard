@@ -17,23 +17,6 @@ library(markdown)
 source("R/data_prep.R")
 ```
 
-# Über die Daten
-
-## Row
-
-Der verwendete Datensatz **"120 years of Olympic history"** stammt von Kaggle
-und enthält rund 271.000 Zeilen zu Athlet:innen und ihren Teilnahmen bei
-Olympischen Spielen von 1896 bis 2016.
-
-**Genutzte Variablen:** NOC (Länderkürzel), Sex, Year, Season, Sport, Medal
-
-**Einschränkungen:**
-
-- Fehlende Werte bei Alter, Größe und Gewicht, besonders in frühen Jahren
-- Die Kategorie "Medal" erfasst nur die drei Erstplatzierten je Event
-
-**Quelle:** [Kaggle – 120 years of Olympic history](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results)
-
 # Frauenanteil 
 
 ## Row {height=40% .tabset}
@@ -231,4 +214,20 @@ make_gender_map(gender_by_country_summer, "Sommerspiele 2016")
 make_gender_map(gender_by_country_winter, "Winterspiele 2014")
 ```
 
+# Über die Daten
+
+## Row
+
+Der verwendete Datensatz **"120 years of Olympic history"** stammt von Kaggle
+und enthält rund 271.000 Zeilen zu Athlet:innen und ihren Teilnahmen bei
+Olympischen Spielen von 1896 bis 2016.
+
+**Genutzte Variablen:** NOC (Länderkürzel), Sex, Year, Season, Sport, Medal
+
+**Einschränkungen:**
+
+- Fehlende Werte bei Alter, Größe und Gewicht, besonders in frühen Jahren
+- Die Kategorie "Medal" erfasst nur die drei Erstplatzierten je Event
+
+**Quelle:** [Kaggle – 120 years of Olympic history](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results)
 
